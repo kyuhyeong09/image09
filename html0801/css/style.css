@@ -1,0 +1,12 @@
+body, section, p, div { 
+    /*body,section 등의 모든 태그에 동일한 스타일 적용 */
+    padding: 0;
+    margin: 0;
+}
+.visual {
+    background-image: url(../images/visual_bg.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    height: 1080px;
+}
