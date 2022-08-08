@@ -44,7 +44,7 @@ body {
 .soccer {
     text-align: center;
     padding: 0;
-    margin: 72px 0 0 0;
+    margin: 72px 0 72px 0;
     background-image: url(../images/image02_bg.png);
     background-position: center center;
     background-repeat: no-repeat;
