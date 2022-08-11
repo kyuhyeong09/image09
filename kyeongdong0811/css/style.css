@@ -1,0 +1,77 @@
+
+body, header, footer, div, nav, section, h1, h2, h3, h4, h5, h6, button, a, ul, li, address, strong, span, em, p {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    color: #3d3d3d;
+    line-height: 1.5;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.05em;    
+    word-break: keep-all;
+}
+ul, li {
+    list-style: none;
+}
+.wrapper {
+    width: 1280px;
+    margin: 0 auto ;
+}
+.category {
+    display: flex;
+    margin: 95px 0 80px 0;
+}
+.category .tit {
+    color: #3d3d3d;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+}
+.category .tit strong {
+    display: block;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+}
+.category ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.category ul li {
+    width: 240px;   
+    margin: 0 20px 0 20px;
+}
+.category ul li.last {
+    margin: 0;
+}
+.category ul li a {
+    display: block;
+}
+.category ul li a img {
+    width: 100%;
+    box-sizing: border-box;
+}
+.category ul li a strong {
+    display: block;
+    margin: 10px 0 0 0;
+    font-weight: 400;
+}
+.sin {
+    width: 620px;
+    height: 514px;
+    margin: 20px 40px 0 320px;
+    background-image: url(../images/tech01.png);
+    background-repeat: no-repeat;
+    
+}
+.gwang {
+    background-image: url(../images/tech02.png);
+    background-repeat: no-repeat;
+    height: 514px;
+}
+
