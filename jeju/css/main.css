@@ -1,0 +1,49 @@
+@import url(default.css);
+
+.jeju h2 {
+    margin: 92px 0 57px 0;
+    font-size: 40px;
+    color: #3d3d3d;
+    font-weight: 700;
+    text-align: center;
+}
+.jeju ul li {
+    float: left;
+    width: 400px;
+    margin: 0 40px 0 0;
+}
+.jeju ul li:last-child {
+    margin-right: 0;
+}
+.jeju ul li a {
+    display: block;
+}
+.jeju ul li strong {
+    display: block;
+    color: #3d3d3d;
+    margin: 13px 0 7px 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+.jeju ul li span {
+    display: block;
+    color: #3d3d3d;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+.sea {
+    height: 488px;
+    margin: 122px 0 0 0;
+    background-image: url(../images/sea_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.sea h2 {
+    padding: 117px 0 180px 0;
+    font-size: 40px;
+    font-weight: 700;
+}

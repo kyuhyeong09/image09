@@ -1,0 +1,95 @@
+@import url(default.css);
+
+.visual {
+    height: 700px;
+    background-image: url(../images/visual_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.visual strong {
+    display: block;
+    padding: 322px 0 9px 0;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+}
+.visual h2 {
+    display: block;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+}
+.category h1 {
+    margin: 134px 0 0 0;
+    color: #1d1d1d;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+}
+.category h2 {
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: left;
+}
+.category ul li {
+    float: left;
+    width: 240px;
+    margin: 0 20px 0 0; 
+}
+.category ul li:last-child {
+    margin-right: 0;
+}
+.category ul li a {
+    display: block;
+    margin: 35px 0 0 0;
+}
+.category ul li a strong {
+    display: block;
+    margin: 10px 0 0 0;
+    color: #3d3d3d;
+    font-size: 15px;
+    font-weight: 400;
+}
+.network {
+    height: 505px;
+    margin: 216px 0 0 0;
+    background-image: url(../images/network_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.network h2 {
+    display: block;
+    color: #FFFFFF;
+    padding: 128px 0 0 0;
+    font-size: 45px;
+    font-weight: 400;
+    text-align: left;
+}
+.network p {
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    padding: 26px 0 37px 0;
+}
+.network a {
+    display: block;
+    float: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    margin: 0 37px 0 0;
+    padding: 10px 9px;
+    font-weight: 400;
+    border: 1px solid rgba(255,255,255,1);
+}
+
+
+
+
+
