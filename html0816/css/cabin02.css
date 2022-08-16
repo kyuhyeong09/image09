@@ -1,0 +1,129 @@
+@import url(default.css);
+
+.service .tit {
+    text-align: center;
+}
+.service .tit h2 {
+    margin: 34px 0 0 0;
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 400;
+}
+.service .tit strong {
+    display: block;
+    margin: 25px 0 32px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+.service .tit p {
+    margin: 0 0 100px 0;
+}
+.service .tit p span {
+    /*p태그 안에서 임의로 줄바꿈을 주기 위해서 <span태그로 묶고 block으로 지정*/
+    display: block;
+}
+
+.service ul li {
+    position: relative;
+    float: left;
+    width: 290px;
+    padding-top: 62px;
+    margin-right: 40px;
+    margin-bottom: 39px;
+}
+.service ul li:nth-child(4),
+.service ul li:nth-child(8) {
+    margin-right: 0;
+}
+.service ul li:nth-child(5){
+    clear: left;
+}
+
+.service ul li::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 44px;
+    height: 39px;
+    border-radius: 22px;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    line-height: 39px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    content: "";
+}
+.service ul li:nth-child(1):before {
+    content: "1";
+}
+.service ul li:nth-child(2):before {
+    content: "2";
+}
+.service ul li:nth-child(3):before {
+    content: "3";
+}
+.service ul li:nth-child(4):before {
+    content: "4";
+}
+.service ul li:nth-child(5):before {
+    content: "5";
+}
+.service ul li:nth-child(6):before {
+    content: "6";
+}
+.service ul li:nth-child(7):before {
+    content: "7";
+}
+.service ul li:nth-child(8):before {
+    content: "8";
+}
+
+.service ul li h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+@media screen and (max-width:640px){
+    
+    .service .tit h2 {
+        margin: 7px 0 26px 0;
+        font-size: 30px;
+    }
+    .service .tit strong {
+        margin: 26px 0 14px 0;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .service .tit p {
+        margin: 0 0 67px 0;
+    }
+    .service .tit p span {
+        display: inline;
+    }
+    
+    .service ul li {
+        float: none;
+        width: auto;
+        padding:0 0 0 56px;
+        margin: 0 0 40px 0;
+    }
+    
+    .service ul li::before {
+        width: 44px;
+        height: 39px;
+        border-radius: 22px;
+        line-height: 39px;
+        font-size: 20px;
+    
+    }
+    
+    
+    .service ul li h3 {
+        margin-bottom: 11px;
+        font-size: 17px;
+    }
+}
