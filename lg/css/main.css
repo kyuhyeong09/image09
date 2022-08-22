@@ -1,39 +1,47 @@
 @import url('default.css');
 
 header {
+    /* body를 기준으로 정렬 */
     position: absolute;
     left: 0;
     top: 0;
     z-index: 100;
-    /*z-index 숫자가 높은 요소가 위에 배치 하단에 다른 요소가 z-index를 갖을 수 있기 때문에 header를 무조건 상단에 두기 위해서 안전하게 100 즉, content영역에 요소는 z-index를 줘도 100미만의 값을 줘야함*/
+    /* z-index 숫자가 높은 요소가 위에 배치
+      하단에 다른 요소가 z-index를 갖을 수 있기
+      때문에 header를 무조건 상단에 두기 위해
+      안전하게 100
+      즉, content영역에 요소는 z-index를 줘도
+      100미만의 값을 줘야함 */
     width: 100%;
-    /* absolute를 주면 해당 요소는 inline태그처럼 작동된다.width가 내부 요소가 존재하는 만큼 들어감*/
+    /* absolute를 주면 해당 요소는 
+       inline태그처럼 작동된다. 
+       width가 내부 요소가 존재하는 만큼 들어감 
+    */
     height: 100px;
-    border-bottom: 1px solid rgba(255,255,255,0.2); 
+    border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 header h1 {
     float: left;
     margin: 26px 253px 0 0;
     font-size: 0;
     line-height: 0;
-    /*로고가 글자없이 이미지만 존재함
-        그래도 글자크기와 행간때문에 여백이 발생함
-        이 여백을 없애고 img가 존재*/
+    /* 로고가 글자없이 이미지만 존재함
+       그래도 글자크기와 행간때문에 여백이 발행함
+       이 여백을 없애고 img가 존재하는 만큼만 적용 */
 }
 header h1 a {
     display: block;
+    width: 103px;
+    height: 45px;
+    background: url(../images/logo_w.svg) no-repeat center center/ 100% ;
 }
 header .gnb {
     float: left;
     margin: 14px 0 0 0;
 }
 header .gnb button {
-    display: none;
+    display: none; /* 모바일 메뉴 열기 버튼 */
 }
-header .gnb button span {
-    display: inline;
-}
-
 header .gnb ul li {
     float: left;
 }
@@ -47,16 +55,31 @@ header .tnb {
     float: right;
     margin: 37px 0 0 0;
 }
-header .tnb button i {
-    color: #fff;
-    font-size: 31px;
-    font-weight: 300;
-}
 header .tnb button {
     margin: 0 0 0 20px;
 }
+header .tnb button i {
+    color: #FFF;
+    font-size: 31px;
+    font-weight: 300;
+}
 header .tnb button span {
     display: none;
+}
+
+header.fixed { /* header가 고정됐을때 jquery가 class를 추가 */
+    position: fixed;
+    background-color: #FFF;
+}
+header.fixed h1 a {
+    background-image: url(../images/logo.svg);
+}
+
+header.fixed .gnb ul li a {
+    color: #1d1d1d;
+}
+header.fixed .tnb button i {
+    color: #1d1d1d;
 }
 @media screen and (max-width:640px){
     header {
@@ -66,51 +89,34 @@ header .tnb button span {
         margin: 15px 0 0 0;
     }
     header h1 a img {
-        width: 43px;/* 모바일에서는 로고사이즈가 변경됨 */
+        width: 43px; /* 모바일에서는 로고사이즈가 변경됨 */
     }
     header .gnb {
         float: right;
-        margin: 14px 0 0 0;
+        margin: 15px 0 0 0;
     }
     header .gnb button {
-        display: block;
+        display: block; /* 모바일 메뉴 열기 버튼 */
     }
     header .gnb button i {
-        color: #fff;
+        color: #FFF;
         font-size: 18px;
+        font-weight: 300;
     }
     header .gnb button span {
         display: none;
     }
     header .gnb ul {
-        display: none;
-    }
-    
-    header .gnb ul li {
-        float: left;
-    }
-    header .gnb ul li a {
-        display: block;
-        padding: 20px 37px;
-        color: #FFF;
-        font-size: 20px;
+        display: none; /* 모바일에서는 메뉴가 안나옴 */
     }
     header .tnb {
-        float: right;
-        margin: 37px 0 0 0;
-    }
-    header .tnb button i {
-        color: #fff;
-        font-size: 31px;
-        font-weight: 300;
-    }
-    header .tnb button {
-        margin: 0 0 0 20px;
-    }
-    header .tnb button span {
         display: none;
     }
-}
+    header.fixed .gnb button i {
+        color: #1d1d1d;
+    }
+} /* media 종료 */
+
 .visual {
     position: relative; /* before의 기준점 */
     height: 900px;
@@ -130,6 +136,7 @@ header .tnb button span {
     content: "";
 }
 .visual .inner {
+    /* before 검은색보다 글자를 위에 배치하기 위해서 */
     position: relative;
     z-index: 1;
 }
@@ -140,53 +147,52 @@ header .tnb button span {
     line-height: 1.2;
 }
 .visual h2 span {
-    display: block;/*pc에서만 줄바꿈                       */
+    display: block; /* pc에서만 줄바꿈 */
 }
-
-@media screen and (max-width:640px) {
+@media screen and (max-width:640px){
     .visual {
         height: auto;
-        background-position: center center;
-        background-size: cover;
-        color: #FFF;
     }
     .visual::before {
-        background-color: rgba(0,0,0,0.1);
-    }
-    .visual .inner {
-        position: relative;
-        z-index: 1;
+        background-color: rgba(0,0,0,0.4);
     }
     .visual h2 {
-        padding: 205px 0 23px 0;
+        padding: 205px 0 135px 0;
         font-size: 25px;
         text-align: center;
     }
     .visual h2 span {
-        display: inline;/*pc에서만 줄바꿈                       */
+        display: inline; /* pc에서만 줄바꿈 */
     }
     .visual p {
-        display: none;
+        display: none; /* 모바일에서 안보임 */
     }
+}/* media 종료 */
+.biz .rowgroup1 {
+    margin: 109px 0 69px 0;
 }
-
+.biz .rowgroup2 {
+    margin: 0 0 69px 0;
+}
 .biz .fleft img {
     float: left;
 }
 .biz .fleft .inner {
     float: right;
+    margin: 0 40px 0 0;
 }
 .biz .fright img {
     float: right;
 }
 .biz .fright .inner {
     float: left;
+    margin: 0 0 0 40px;
 }
 .biz .inner {
     width: 510px;
 }
 .biz h2 {
-    margin: 38px 0 14px 0;
+    margin: 32px 0 8px 0;
     font-size: 40px;
     font-weight: 700;
 }
@@ -197,5 +203,309 @@ header .tnb button span {
     font-weight: 400;
 }
 .biz .link {
-    margin: 33px 0 0 0;
+    margin: 36px 0 0 0;
+}
+.biz .link ul li {
+    float: left;
+    width: 150px;
+    margin: 0 10px 10px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.biz .link ul li a {
+    display: block;
+    line-height: 39px;
+    white-space: nowrap;
+    text-align: center;
+}
+@media screen and (max-width:640px){
+    .biz .rowgroup1 {
+        margin: 59px 0 32px 0;
+    }
+    .biz .rowgroup2 {
+        margin: 0 0 32px 0;
+    }
+    .biz .fleft img {
+        float: none;
+    }
+    .biz .fleft .inner {
+        float: none;
+        margin: 0;
+    }
+    .biz .fright img {
+        float: none;
+    }
+    .biz .fright .inner {
+        float: none;
+        margin: 0;
+    }
+    .biz .inner {
+        width: auto;
+    }
+    .biz img {
+        width: 100%; /* img태그는 넓이나 높이 하나만 주면 비율에 맞게 줄어듬 */
+    }
+    .biz h2 {
+        margin: 17px 0 8px 0;
+        font-size: 25px;
+    }
+    .biz strong {
+        margin: 0 0 9px 0;
+        font-size: 15px;
+    }
+    .biz .link {
+        margin: 24px 0 0 0;
+    }
+    .biz .link ul li {
+        width: auto;
+        margin: 0 5px 0 0;
+    }
+    .biz .link ul li a {
+        padding: 0 20px;
+        line-height: 34px;
+        text-align: center;
+    }
+
+    /* 
+        link의 ul li를 좌우로 배치하고 슬라이드 되도록 하기 위함 
+        1. ul은 모든 li의 넓이의 합을 넓이로 가지고 있어야함
+        2. ul은 position: absolute 이어야함 
+        3. ul을 감싸고 있는 요소는 좌우스크롤을 허용해야함
+        3. ul을 감싸고 있는 요소는 높이를 줘야함 (내부 콘텐츠 만큼의)
+    */
+    .biz .link {
+        position: relative;
+        left: -10px;
+        overflow: auto;
+        width: calc(100% + 30px); /* %단위와 px단위를 동시에 계산해야 할때 사용 */
+        height: 54px;
+    }
+    .biz .link ul {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .biz .rowgroup1 .link ul {
+        width: 557px;
+    }
+    .biz .rowgroup2 .link ul {
+        width: 370px;
+    }
+    .biz .rowgroup3 .link ul {
+        width: 420px;
+    }
+
+}/* media 종료 */
+
+.purpose {
+    position: relative;
+    height: 357px;
+    margin: 140px 0 0 0;
+    background: url(../images/purp_bg.png) no-repeat center center / cover;
+    color: #FFF;
+    text-align: center;
+}
+.purpose::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    content: "";
+}
+.purpose .inner {
+    position: relative;
+    z-index: 1;
+}
+.purpose h2 {
+    padding: 93px 0 43px 0;
+    font-size: 35px;
+    line-height: 1.28;
+}
+.purpose h2 strong {
+    position: relative;
+}
+.purpose h2 strong::before {
+    left: -83px;
+    top: -20px;
+    background: url(../images/prop_quot_left.png) no-repeat center center;
+    content: "";
+}
+.purpose h2 strong::after {
+    right: -70px;
+    bottom: -10px;
+    background: url(../images/prop_quot_right.png) no-repeat center center;
+    content: "";
+}
+.purpose h2 strong::before, .purpose h2 strong::after {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    color: rgba(255,255,255,0.5);
+    font-size: 130px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+@media screen and (max-width:640px){
+    .purpose {
+        height: auto;
+        padding: 0 0 40px 0;
+        margin: 59px 0 0 0;
+    }
+    .purpose::before {
+        background-color: rgba(0,0,0,0.3);
+    }
+    .purpose h2 {
+        padding: 78px 0 74px 0;
+        font-size: 25px;
+    }
+    .purpose h2 strong::before {
+        left: -29px;
+        top: -51px;
+        background-size: 35px auto; /* 넓이를 35px 높이는 비율에 맞게 알아서 */
+    }
+    .purpose h2 strong::after {
+        right: 59%;
+        bottom: -49px;
+        background-size: 35px auto;
+    }
+    .purpose h2 span {
+        display: block; /*줄바꿈*/
+    }
+}/* media 종료 */
+.news {
+    margin: 102px 0 132px 0;
+}
+
+.news h2 {
+    display: none;
+}
+.news ul li {
+    overflow: hidden;
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.news ul li:last-child {
+    margin-right: 0;
+}
+.news ul li a {
+    display: block;
+}
+.news ul li a img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.news ul li a .cate {
+    display: block;
+    margin: 20px 20px 9px 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.news ul li a .tit {
+    display: block;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: 400;
+    /*2줄 고정*/
+    line-height: 1.3;
+    height: 2.6em;
+    overflow: hidden;
+}
+.news ul li a .date {
+    display: block;
+    margin: 26px 20px 30px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #666666;
+}
+
+@media screen and (max-width:640px) {
+    .news {
+        margin: 72px 0 76px 0;
+    }
+   
+    .news ul li {
+        display: none;
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+    .news ul li:first-child {
+        display: block;
+        /*한개의 li만 나오도록 하기 위해서 모든 li를 숨기고 첫번째 li만 남도록*/
+    }
+    .news ul li a .cate {
+        margin: 23px 20px 3px 20px;
+    }
+    .news ul li a .tit {
+        font-size: 15px;
+        /*2줄 고정*/
+        height: auto;
+        overflow: visible;
+    }
+    .news ul li a .date {
+        margin: 0;
+        padding: 19px 20px 27px 20px;
+    }
+}
+
+footer {
+    padding: 25px 0 73px 0;
+    background-color: #0a0a0a;
+    color: rgba(255,255,255,0.8);
+}
+footer .family {
+    float: right;
+}
+footer .family button {
+    width: 180px;
+    height: 40px;
+    padding: 0 9px 0 17px;
+    border: 1px solid #FFF;
+}
+footer .family button span {
+    float: left;
+}
+footer .family button i {
+    float: right;
+}
+footer .inner {
+    float: left;
+}
+footer .fnav li {
+    position: relative;
+    float: left;
+}
+footer .fnav li::after {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 1px;
+    height: 13px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+footer .fnav li:last-child:after {
+    display: none; /* li중에 마지막 li의 after를 숨김*/
+}
+footer .fnav li.privacy {
+    font-weight: 700;
+}
+footer .fnav li a {
+    display: block;
+    padding: 0 15px;
+}
+footer .fnav li:first-child a {
+    padding-left: 0;
+}
+footer .finfo {
+    margin: 35px 0 2px 0;
+    color: rgba(255,255,255,0.6);
+}
+footer .copyright {
+    color: rgba(255,255,255,0.6);
 }
