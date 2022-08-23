@@ -1,0 +1,72 @@
+@import url('default.css');
+
+header {
+    position: absolute; /*body를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* position:absolute를 주면 요소가 inline-block이 된 것처럼
+       내부에 콘텐츠가 존재하는 만큼의 넓이만 갖는다.*/
+    height: 100px;
+    color: #fff;
+}
+header h1 {
+    float: left;
+    margin: 30px 80px 0 0;
+}
+header h1 a {
+    display: block;
+    width: 297px;
+    height: 62px;
+    background: url(../images/logo_w.svg) no-repeat center center / 100%;
+    font-size: 0;
+    line-height: 0;
+}
+header .gnb {
+    float: left;
+}
+header .tnb {
+    float: right;
+}
+
+.visual {
+    height: 850px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+}
+.visual h2 {
+    padding: 289px 0 30px 0;
+    font-size: 60px;
+    font-weight: 700;
+}
+.visual p {
+    font-size: 30px;
+}
+.visual .txt_mobile {
+    display: none;
+}
+
+@media screen and (max-width:640px) {
+    .visual {
+        height: auto;
+        padding: 0 0 65px 0;
+    }
+    .visual h2 {
+        padding: 92px 0 6px 0;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+    .visual h2 span {
+        display: block;
+    }
+    .visual p {
+        font-size: 10px;
+    }
+    .visual .txt_pc {
+        display: none;
+    }
+    .visual .txt_mobile {
+        display: block;
+    }
+}
