@@ -38,16 +38,21 @@ button {
 }
 
 html, body {
-    min-width: 1280px;
+   
     /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
        최소 넓이를 줌 */
     color: #3D3D3D;
     line-height: 1.5;
-    font-family: 'EY', sans-serif;
+    font-family: 'EY','Noto Sans KR', 'NanumGothic', 'Malgun Gothic',  'Apple SD Gothic','Apple SD Gothic Neo','Dotum', sans-serif;
     font-size: 15px;
     font-weight: 400;
     letter-spacing: -0.05em;
     word-break: keep-all;
+}
+#wrap {
+    overflow: hidden;
+    min-width: 1280px;
+    /*id ="wrap"*/
 }
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
@@ -62,6 +67,11 @@ html, body {
     html, body {
         min-width: auto;
         font-size: 13px;
+    }
+    #wrap {
+        overflow-x: hidden;
+        min-width: auto;
+        /*id ="wrap"*/
     }
     .wrapper {
         width: auto;

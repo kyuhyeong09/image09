@@ -24,9 +24,74 @@ header h1 a {
 }
 header .gnb {
     float: left;
+    margin: 20px 0 0 0;
+}
+header .gnb button {
+    display: none;/*모바일에서만 표시 - 메뉴 여는 버튼*/
+}
+header .gnb ul li {
+    float: left;
+}
+header .gnb ul li a {
+    display: block;
+    padding: 27px 27px;
+    font-size: 20px;
 }
 header .tnb {
     float: right;
+    margin: 30px 0 0 0;
+}
+header .tnb ul li {
+    float: left;
+}
+
+header .tnb ul li button span {
+    display: none;
+}
+header .tnb ul li button i {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 300;
+}
+@media screen and (max-width:640px) {
+    header {
+        height: 45px;
+    }
+    header h1 {
+        margin: 9px 0 0 0;
+    }
+    header h1 a {
+        width: 106px;
+        height: 22px;
+    }
+    header .gnb {
+        float: right;
+        margin: 9px 0 0 8px;
+    }
+    header .gnb button {
+        display: block;/*모바일에서만 표시 - 메뉴 여는 버튼*/
+    }
+    header .gnb button span {
+        display: none;
+    }
+    header .gnb button i {
+        font-size: 24px;
+        font-weight: 300;
+    }
+    header .gnb ul {
+        display: none;
+    }
+    
+    header .tnb {
+        float: right;
+        margin: 9px 0 0 0;
+    }
+    header .tnb ul li.mypage {
+        display: none;
+    }
+    header .tnb ul li button i {
+        padding: 0;
+    }
 }
 
 .visual {
@@ -70,3 +135,143 @@ header .tnb {
         display: block;
     }
 }
+
+.book {
+    margin: 102px 0 12px 0;
+}
+.book .tit {
+    float: left;
+}
+.book .tit h2 {
+    margin: 5px 0 16px 0;
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+}
+.book .tit .btn {
+    margin: 27px 0 0 0;
+}
+.book .tit .btn button {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 9px;
+    border: 1px solid #000000;
+}
+.book .tit .btn button span {
+    display: none;
+}
+.book .tit .btn button i {
+    /*padding-left: 10px;*/
+}
+/* 
+    컨텐츠 영역 밖으로 나가는 리스트 - 스크롤(모바일)
+    1. ul를 감싸는 div가 있어야함
+    2. ul를 감싸는 div는 overflow:auto 이어야함 ...(모바일)
+       넓이와 높이를 입력
+    3. ul은 li 전체의 넓이를 가져야함
+       position:absolute (모바일) - 좌우로 슬라이드는 absolute만됨*/
+.book .list {
+    margin-left: 330px;
+}
+
+/*
+    왼쪽요소는 float:left를 줌
+*/
+.book .list ul {
+    width: 1940px;
+}
+.book .list ul li {
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+}
+.book .list ul li:last-child {
+    margin-right: 0;
+}
+.book .list ul li a {
+    display: block;
+}
+.book .list ul li a img {
+    /*border: 1px solid #666666;*/
+}
+.book .list ul li a .subject {
+    display: block;
+    margin: 5px 0 9px 0;
+    font-size: 30px;
+}
+.book .list ul li a .writer {
+    display: block;
+    font-size: 15px;
+}
+
+@media screen and (max-width:640px) {
+    .book {
+        margin: 25px 0 31px 0;
+    }
+    .book .tit {
+        float: none;
+    }
+    .book .tit h2 {
+        float: left;
+        margin: 0;
+        font-size: 30px;
+    }
+    .book .tit p {
+        display: none;
+    }
+    .book .tit .btn {
+        float: right;
+        margin:0;
+    }
+    .book .tit .btn button {
+        float: left;
+        width: 24px;
+        height: 24px;
+        margin-right: 4px;
+        border: 1px solid #000000;
+    }
+    
+    .book .list {
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: calc(100% + 20px);
+        padding: 10px 0;
+        margin-left: 0;
+    }
+    /*   
+        calc는 넓이나 높이의 수치를 계산할때 사용
+        대부분 %와 px를 혼용할 때 사용
+        list에 100%를 주면 wrapper가 좌우에 여백 20px을
+        준 안쪽으로 넓이가 생성된다.
+        그런데 오른쪽만 콘텐츠 영역 밖으로 더 나가고자 하면
+        calc(100% + 20px)*/
+    
+    /*
+        왼쪽요소는 float:left를 줌
+    */
+    .book .list ul {
+        width: 1020px;
+        padding: 24px 0 0 0;
+    }
+    .book .list ul li {
+        width: 155px;
+        margin: 0 10px 0 0;
+    }
+    
+    .book .list ul li a {
+        display: block;
+    }
+    .book .list ul li a img {
+        width: 100%;
+    }
+    .book .list ul li a .subject {
+        display: block;
+        margin: 15px 0 10px 0;
+        font-size: 15px;
+    }
+    .book .list ul li a .writer {
+        display: block;
+        font-size: 10px;
+    }
+}                      
