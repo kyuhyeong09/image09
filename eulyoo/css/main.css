@@ -53,6 +53,57 @@ header .tnb ul li button i {
     font-size: 24px;
     font-weight: 300;
 }
+/*header fixed*/
+
+header.fixed {
+    position: fixed; /*body를 기준으로 정렬*/
+    z-index: 100;
+    border-bottom: none;
+    background-color: rgba(117,103,82,0.95);
+    box-shadow: 0 4px 10px rgba(0,0,0,1);
+    color: #fff;
+}
+
+header.fixed h1 a {
+    display: block;
+    width: 297px;
+    height: 62px;
+    background: url(../images/logo_w.svg) no-repeat center center / 100%;
+    font-size: 0;
+    line-height: 0;
+}
+header.fixed .gnb {
+    float: left;
+    margin: 20px 0 0 0;
+}
+header.fixed .gnb button {
+    display: none;/*모바일에서만 표시 - 메뉴 여는 버튼*/
+}
+header.fixed .gnb ul li {
+    float: left;
+}
+header.fixed .gnb ul li a {
+    display: block;
+    padding: 27px 27px;
+    font-size: 20px;
+}
+header.fixed .tnb {
+    float: right;
+    margin: 30px 0 0 0;
+}
+header.fixed .tnb ul li {
+    float: left;
+}
+
+header.fixed .tnb ul li button span {
+    display: none;
+}
+header.fixed .tnb ul li button i {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 300;
+}
+
 @media screen and (max-width:640px) {
     header {
         height: 45px;
