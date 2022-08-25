@@ -162,7 +162,9 @@ header .tnb ul li button i {
     display: none;
 }
 .book .tit .btn button i {
-    /*padding-left: 10px;*/
+    margin: 5px 0 0 0;
+    font-size: 24px;
+    font-weight: 300;
 }
 /* 
     컨텐츠 영역 밖으로 나가는 리스트 - 스크롤(모바일)
@@ -279,6 +281,7 @@ header .tnb ul li button i {
 .interview {
     background-color: #F7E9CF;
     padding: 0 0 154px 0;
+    margin: 80px 0 0 0;
 }
 .interview h2 {
     padding: 45px 0 45px 0;
@@ -382,4 +385,218 @@ header .tnb ul li button i {
         float: right;
         margin: 0;
     }
+}
+
+.news {
+    margin: 61px 0 0 0;
+}
+.news .tit h2 {
+    float: left;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 700;
+}
+.news .tit .btn {
+    float: right;
+}
+.news .tit .btn button {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 9px;
+    border: 1px solid #000000;
+}
+.news .tit .btn button span {
+    display: none;
+}
+.news .tit .btn button i {
+    margin: 5px 0 0 0;
+    font-size: 24px;
+    font-weight: 300;
+}
+.news .list {
+    padding: 30px 0 0 0;
+}
+.news .list ul {
+    /* li넓이 290 + 여백 40 = 330 *6개*/
+    width: 1980px;
+    margin: 0 0 0 -330px;
+}
+.news .list ul li {
+    float: left;
+    width: 290px;
+    margin: 0 40px 0 0;
+}
+.news .list ul li a {
+    display: block;
+}
+.news .list ul li a img {
+    width: 100%;
+}
+.news .list ul li a .subject {
+    display: block;
+    margin: 11px 0 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* 최대 2줄 */
+    line-height: 1.5;
+    max-height: 3em;
+    overflow: hidden;
+}
+.news .list ul li a .cnt {
+    display: block;
+    line-height: 1.5;
+    max-height: 4.5em;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width:640px) {
+    .news {
+        margin: 61px 0 0 0;
+    }
+    .news .tit h2 {
+        font-size: 30px;
+    }
+    .news .tit .btn {
+        float: right;
+    }
+    
+    .news .tit .btn button {
+        float: left;
+        width: 40px;
+        height: 40px;
+        margin-right: 9px;
+        border: 1px solid #000000;
+    }
+   
+    .news .tit .btn button i {
+        margin: 5px 0 0 0;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .news .list {
+        padding: 10px 0 10px 0;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+    .news .list ul {
+        /* li넓이 290 + 여백 40 = 330 *6개*/
+        width: 1860px;
+        margin: 0 0 0 -20px;
+    }
+    .news .list ul li {
+        margin: 0 20px 0 0;
+    }
+ 
+    .news .list ul li a .subject {
+        margin: 10px 0 10px 0;
+        font-size: 15px;
+        font-weight: 400;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    
+        /* 최대 2줄 */
+        line-height: 1.5;
+        max-height: 3em;
+        overflow: hidden;
+    }
+    .news .list ul li a .cnt {
+        display: block;
+        line-height: 1.5;
+        max-height: 4.5em;
+        overflow: hidden;
+    }
+}
+footer {
+    padding: 59px 0 75px 0;
+    margin: 174px 0 0 0;
+    background-color: #6F6D6D;
+    color: #fff;
+}
+
+footer .flogo {
+    float: left;
+}
+footer .flogo img {
+    width: 298px;
+}
+footer .fnav {
+    float: left;
+    margin: 0 90px 0 90px;
+}
+footer .fnav ul li a {
+    display: block;
+    line-height: 25px;
+}
+footer .sns {
+    float: right;
+    font-size: 0;
+    line-height: 0;
+}
+footer .sns a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+footer .sns a.insta {
+    background: url(../images/sns_insta.svg) no-repeat center center;
+}
+footer .sns a.facebook {
+    background: url(../images/sns_facebook.svg) no-repeat center center;
+}
+footer .sns a.naver {
+    background: url(../images/sns_naver.svg) no-repeat center center;
+}
+footer .copyright {
+    float: left;
+    line-height: 25px;
+}
+
+@media screen and (max-width:640px) {
+    footer {
+        padding: 14px 0 12px 0;
+        margin: 130px 0 0 0;
+        text-align: center;
+    }
+    
+    footer .flogo {
+        float: none;
+    }
+    footer .flogo img {
+        width: 138px;
+    }
+    footer .fnav {
+        float: none;
+        margin: 0 12px 0 26px;
+    }
+    footer .fnav ul li a {
+        line-height: 22px;
+    }
+    footer .sns {
+        float: none;
+    }
+    footer .sns a {
+        width: 40px;
+        height: 40px;
+    }
+    footer .sns a.insta {
+        background-size: 22px auto;
+    }
+    footer .sns a.facebook {
+        background-size: 10px auto;
+    }
+    footer .sns a.naver {
+        background-size: 17px auto;
+    }
+    footer .copyright {
+        float: none;
+        margin: 13px 0 0 0;
+        line-height: 25px;
+    } 
 }
