@@ -26,18 +26,36 @@ $(document).ready(function() {
     /*로딩했을때 맨 처음*/   
     let scrolling = $(window).scrollTop()
     console.log(scrolling)
-
+    if(scrolling > 0){
+        $('header').addClass('fixed')
+    }else{
+        $('header').removeClass('fixed')
+    }
     /*스크롤 할때마다 실행*/
     $(window).scroll(function(){ /*스크롤 할때마다 실행*/
+        headerFixed()//함수의 실행
+   
+    })
+
+    function headerFixed(){
         scrolling = $(window).scrollTop()
-        console.log(scrolling)
-        if(scrolling > 0){
+        if(scrolling < 0){
             $('header').addClass('fixed')
         }else{
             $('header').removeClass('fixed')
         }
-    })
+    }
 
+
+    $('header nav > ul').on('mouseenter', function(){
+        $('header').addClass('open')
+    })
+    $('header').on('mouseenter', function(){
+        $('header').removeClass('open')
+    })
+    $('header nav > ul >li:last-child >ul >').on('mouseenter', function(){
+        $('header').removeClass('open')
+    })
 })
 
 
