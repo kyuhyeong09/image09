@@ -34,7 +34,6 @@ button {
        자동으로 상속 받지 않음 - form관련 태그는 다 그럼 */
     cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
 }
-
 html, body {
     color: #3D3D3D;
     line-height: 1.5;
@@ -48,6 +47,7 @@ html, body {
     word-break: keep-all;
 }
 #wrap { /* id="wrap" */
+    overflow: hidden;
     /* overflow: hidden; */
     min-width: 1280px;
     /* 브라우저에 가로스크롤이 생성되었을때 배경이 짤리지 않기 위해 
