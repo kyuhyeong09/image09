@@ -1,0 +1,307 @@
+@import url('default.css');
+
+h1 {
+    display: none;
+}
+
+.visual {
+    height: 870px;
+    background: url(../images/visual_bg.png) no-repeat center center / cover;
+    color: #fff;
+    text-align: center;
+}
+.visual h2 {
+    position: relative; /* before 정렬의 기준*/
+    padding: 324px 0 21px 0;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.visual h2::before {
+    /*왼쪽요소는 right 에 margin-right로 정렬*/
+    position: absolute;
+    right: 50%;
+    top: 328px;
+    margin-right: 330px;
+    width: 55px;
+    height: 261px;
+    border: 5px solid #fff;
+    border-right: 0;
+    content: "";
+}
+.visual h2::after {
+    /*왼쪽요소는 right 에 margin-right로 정렬*/
+    position: absolute;
+    left: 50%;
+    top: 328px;
+    margin-left: 330px;
+    width: 55px;
+    height: 261px;
+    border: 5px solid #fff;
+    border-left: 0;
+    content: "";
+}
+.visual p {
+    font-size: 20px;
+}
+
+@media screen and (max-width:640px) {
+    .visual {
+        height: auto;
+    }
+    .visual h2 {
+        padding: 141px 0 16px 0;
+        font-size: 40px;
+    }
+    .visual h2::before {
+       display: none;
+    }
+    .visual h2::after {
+      display: none;
+    }
+    .visual p {
+        font-size: 13px;
+        padding: 0 0 140px 0;
+    }
+}
+.river {
+    margin: 117px 0 0 0;
+}
+.river .inner2 {
+    position: relative;
+}
+.river h2 {
+    float: left;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.river .inner {
+    float: right;
+    width: 730px;
+}
+.river p {
+    margin: 0 0 36px 0;
+}
+.river .more {
+    position: absolute;
+    left: 0;
+    top: 210px;
+}
+.river .more a {
+    display: inline-block;
+    position: relative;
+    padding: 0 105px 0 0;
+}
+.river .more a::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: #666666;
+    content: "";
+}
+
+@media screen and (max-width:640px) {
+    .river {
+        margin: 84px 0 0 0;
+    }
+   
+    .river h2 {
+        float: none;
+        font-size: 25px;
+    }
+    .river .inner {
+        float: none;
+        width: auto;
+    }
+    .river p {
+        margin: 16px 0 21px 0;
+    }
+    .river img {
+        width: 100%;
+    }
+    .river .more {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: 21px 0 0 0;
+        text-align: center;
+    }
+    .river .more a {
+        padding: 0 0 2px 0;
+    }
+    .river .more a::after {
+        top: auto;
+        bottom: 0;
+        width: 100px;
+    }
+}
+
+.road {
+    margin: 135px 0 0 0;
+}
+.road .inner {
+    position: relative;
+}
+.road h2 {
+    float: left;
+}
+.road .cnt {
+    float: right;
+    width: 730px;
+    margin: 84px 0 0 0;
+}
+.road ul li {
+    float: left;
+    width: 400px ;
+    height: 345px;
+    margin: 0 40px 0 0;    
+}
+.road ul li:last-child {
+    margin-right: 0;
+}
+.road ul li .roa01 ()
+
+
+
+.garden {
+    position: relative;
+    margin: 114px 0 0 0;
+}
+.garden .inner {
+    position: relative;
+    z-index: 2;
+    /*img 위에 배치하기 위해서 z-index를 줌
+      z-index가 적용되게 하기 위해서는 position값이 필수*/
+    background-color: rgba(9,104,124,0.95);
+    width: 50%;
+    height: 580px;
+    margin: 0 0 0 50%;
+    color: #fff;
+}
+.garden .inner .inner2 {
+    width: 620px;
+    padding: 106px 0 0 100px;
+}
+.garden h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+}
+.garden p {
+    font-size: 15px;
+    font-weight: 400;
+}
+.garden img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 1;
+    margin-left: -960px;
+}
+.garden .more {
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 416px;
+    z-index: 3;
+}
+.garden .more a {
+    display: inline-block;
+    position: relative;
+    padding: 0 105px 0 0;
+    color: #fff;
+}
+.garden .more a::after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 100px;
+    height: 1px;
+    background-color: rgba(255,255,255,0.6);
+    content: "";
+}
+
+
+@media screen and (max-width:640px) {
+    .garden {
+        margin: 80px 20px 0 20px;
+    }
+    .garden .inner {
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        margin: 0;
+        color: #3d3d3d;
+    }
+    .garden .inner .inner2 {
+        width: auto;
+        padding: 0;
+    }
+    .garden h2 {
+        font-size: 25px;
+        margin: 0 0 16px 0;
+    }
+   
+    .garden img {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        margin: 21px 0 21px 0;
+    }
+    .garden .more {
+        position: relative;
+        left:auto;
+        top: auto;
+        text-align: center;
+    }
+    .garden .more a {
+        padding: 0 0 2px 0;
+        color: #3d3d3d;
+    }
+    .garden .more a::after {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        background-color: #666666;
+    }
+   
+}
+
+footer {
+    text-align: center;
+    color: #666666;
+}
+footer ul {
+    display: inline-block;
+    margin: 62px 0 32px 0;
+}
+
+footer ul li {
+    float: left;
+    margin: 0 10px 0 0;
+}
+footer ul li:last-child {
+    margin-right: 0;
+}
+footer .copyright {
+    margin: 0 0 80px 0;
+}
+
+@media screen and (max-width:640px) {
+    footer {
+       margin: 60px 0 0 0; 
+       background-color: #f4f4f4;
+    }
+    footer ul {
+        margin: 49px 0 20px 0;
+    }
+    
+    footer .copyright {
+        margin: 0;
+        padding: 0 0 52px 0;
+    }
+}

@@ -1,0 +1,118 @@
+@import url(default.css);
+
+.visual {
+    height: 850px;
+    background-image: url(../image/visual_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+}
+.visual h2 {
+    padding: 298px 0 0 0;
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.second {
+    height: 245px;
+    background-color: #F39800;
+    color: #ffffff;
+    text-align: center;
+}
+.second h2 {
+    padding: 54px 0 24px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.second p {
+    font-size: 15px;
+    font-weight: 400;
+}
+.picture ul li {
+    float: left;
+    width: 33.33%;
+    /* 100/3 = 33.33333333 인데 반올림해서 33.34% 이렇게 주면 3개가 안나옴
+        33.33*3 = 100이하여야 함 */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+.picture ul li.how {
+    background-image: url(../image/pic01.png);
+}
+.picture ul li.store {
+    background-image: url(../image/pic02.png);
+}
+.picture ul li.color {
+    background-image: url(../image/pic03.png);
+}
+.picture ul li a {
+    display: block;
+    height: 300px;
+    padding: 82px 0 0 230px;
+}
+.picture ul li a strong {
+    display: block;
+    margin: 5px 0 18px 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.picture ul li a i {
+    font-size: 50px;
+}
+
+.news {
+    display: block;
+}
+
+.news h2 {
+    margin: 52px 0 35px 0;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+.news ul {
+    float: left;
+}
+.news ul li {
+    float: left;
+    margin: 0 30px 0 0;
+}
+.news ul li:last-child {
+    margin-right: 0;
+}
+.news ul li strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+}
+.news ul li span {
+    display: block;
+    margin: 9px 0 9px 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+.news ul li p {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+footer {
+    margin: 96px 0 0 0;
+    padding: 60px 0 90px 0;
+    background-color: #3D3D3D;
+    height: 245px;
+    color: rgba(255,255,255,0.8);
+}
+footer .inner .fnav li {
+    float: left;
+}
+footer .copyright {
+    margin: 64px 0 0 0;
+    color: rgba(255,255,255,0.6);
+}
