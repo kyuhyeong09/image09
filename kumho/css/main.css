@@ -1,0 +1,44 @@
+@import url(default.css);
+@import url(common.css);
+
+/*메인에만 존재하는 디자인 스타일*/
+.visual {
+    height: 1000px;
+    background: url(../image/main/visual_bg.png) no-repeat center center/cover;
+    color: #fff;
+}
+.visual .cnt_h {
+    position: relative;
+    height: 1000px;
+}
+.visual .cnt_h .inner {
+    position: absolute;
+    left: 0;
+    top: calc(50% - -132px);
+    margin-top: -132px;
+}
+.visual h2 {
+    padding: 0 0 35px 0;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 1;
+}
+.visual p {
+    font-size: 20px;
+}
+
+@media screen and (max-width:640px) {
+    .visual {
+        height: 670px;
+    }
+    .visual .cnt_h .inner {
+        top: calc(50% - -100px);
+    }
+    .visual h2 {
+        padding: 0 0 17px 0;
+        font-size: 35px;
+    }
+    .visual p {
+        font-size: 15px;
+    }
+}

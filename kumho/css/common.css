@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /*absolute를 주면 요소가 inline태그처럼
+      콘텐츠가 존재하는 만큼만 넓이를 갖는다*/
+    color: #fff;
+}
+.header .logo {
+    position: absolute;
+    left: 20px;
+    top: 29px;
+}
+.header .logo a {
+    display: block;
+    width: 112px;
+    height: 37px;
+    background-image: url(../image/common/logo_w.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.header .gnb .open {
+    display: none;
+}
+.header .gnb .close {
+    display: none;
+}
+.header .gnb > ul {
+    /*li를 좌우로 배치할때 float:left할때는 li에 float를 하지만 flexbox 코딩으로 좌우로 정렬할때는 li를 감싸는 부모(ul)*/
+    display: flex;
+    justify-content: center;
+}
+.header .gnb > ul > li > ul {
+    display: none;
+}
+.header .lang {
+    position: relative;
+    right: 20px;
+}
+.header .lang ul {
+    display: none;
+}
