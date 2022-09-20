@@ -17,5 +17,10 @@ $(document).ready(function(){
         console.log('window의 높이' + winH);
     });
 
+
+    $('.biz .list ul li').on('mouseenter', function(){
+        $('.biz .list ul').addClass('over');
+        $(this).addClass('active');
+    });
     
 });//document.ready 종료

@@ -47,3 +47,379 @@
         font-size: 15px;
     }
 } /* visual 반응형 종료 */
+
+
+.biz .tit {
+    margin: 71px 0 29px 0;
+}
+.biz .tit h2 {
+    float: left;
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.biz .tit a {
+    float: right;
+    display: block;
+    margin: 35px 0 0 0;
+}
+.biz .tit a span {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+}
+.biz .tit a i {
+    float: left;
+    font-size: 20px;
+}
+.biz .list ul {
+    display: flex;
+    /* 하위요소들이 특별하게 여러줄을 허용하지 않는 한 무조건 한줄
+       하위 요소들의 넓이가 내가 준 값이 안들어 갈 수도 있음
+       (무조건 한줄에 넣어야 하기 때문에 flex가 임의로 넓이를 조절함) 
+    */
+}
+.biz .list ul li {
+    width: 25%;
+}
+.biz .list ul li.active {
+    width: 50%;
+}
+.biz .list ul li a {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+    /*a안에 있는 strong과 span 태그를 세로배치 - 아래정렬*/
+    height: 750px;
+    padding: 0 0 89px 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFF;
+}
+.biz .list ul li a::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1; /*strong 과 span태그가 위에 배치*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    content: "";
+}
+.biz .list ul li.arch a {
+    background-image: url(../images/main/biz_arc.png);
+}
+.biz .list ul li.civ a {
+    background-image: url(../images/main/biz_civil.png);
+}
+.biz .list ul li.housing a {
+    background-image: url(../images/main/biz_house.png);
+}
+.biz .list ul li.plant a {
+    background-image: url(../images/main/biz_plant.png);
+}
+.biz .list ul li a strong {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin: 0 0 16px 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.biz .list ul li a span {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.biz .list ul li,
+.biz .list ul li a,
+.biz .list ul li a strong,
+.biz .list ul li a span,
+.biz .list ul li a::before {
+    transition: 0.5s;
+}
+
+/*하나의 li에 마우스를 올렸을때*/
+.biz .list ul.over li.active {
+    width: 50%;
+}
+.biz .list ul.over li.active a strong {
+    font-size: 60px;
+}
+.biz .list ul.over li.active a span {
+    font-size: 20px;
+}
+.biz .list ul.over li:not(.active) {
+    /* li들 중에서 */
+    color: rgba(255,255,255,0.6);
+
+}
+.biz .list ul.over li:not(.active) a::before {
+    background-color: rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width:640px) {
+    
+    .biz .tit {
+        margin: 28px 0 16px 0;
+    }
+    .biz .tit h2 {
+        float: none;
+        font-size: 25px;
+    }
+    .biz .tit a {
+       display: none;
+    }
+    .biz .list ul {
+        display: block;
+    }
+    .biz .list ul li {
+        width: auto;
+    }
+
+    .biz .list ul li a {
+        display: block;
+        height: auto;
+        padding: 34px 0 32px 20px;
+    }
+    .biz .list ul li a::before {
+        background-color: rgba(0,0,0,0.2);
+    }
+
+    .biz .list ul li a strong {
+        margin: 0 0 7px 0;
+        font-size: 25px;
+    }
+   
+    
+}
+
+.news .inner {
+    position: relative;
+}
+.news h2 {
+    margin: 70px 0 58px 0;
+    color: #1d1d1d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.news ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news ul li {
+    position: relative;
+    width: 420px;
+}
+.news ul li::after{
+    position: absolute;
+    right: -30px;
+    top: 7px;
+    width: 1px;
+    height: 171px;
+    background-color: #ededed;
+    content: "";
+}
+.news ul li a {
+    display: flex;
+    flex-direction: column;
+}
+.news ul li a .subject {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    /* 2줄 고정*/
+    height: 2.4em;
+    overflow: hidden;
+}
+.news ul li a .cnt {
+    margin: 27px 0 24px 0;
+    line-height: 1.5;
+    height: 4.5em;
+    overflow: hidden;
+}
+.news ul li a .date {
+    color: #666;
+}
+.news .more {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.news .more a {
+    display: flex;
+}
+.news .more a span {
+    margin: 0 10px 0 0;
+}
+.news .more a i {
+    font-size: 20px;
+}
+
+@media screen and (max-width:640px) {
+    .news .inner {
+        position: absolute;
+    }
+    .news h2 {
+        margin: 70px 0 58px 0;
+        color: #1d1d1d;
+        font-size: 50px;
+        font-weight: 700;
+    }
+    .news ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .news ul li {
+        width: auto;
+        padding: 0 0 16px 0;
+        margin: 0 0 17px 0;
+        border-bottom: 1px solid #ededed;
+    }
+    .news ul li:last-child {
+        padding: 0;
+        border-bottom: 0;
+    }
+    .news ul li::after{
+        display: none;
+        right: 0;
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+    }
+    
+    .news ul li a .subject {
+        margin: 0 0 12px 0;
+        font-size: 17px;
+        font-weight: 400;
+        /* 2줄 고정*/
+        height: auto;
+        overflow: visible;
+    }
+    .news ul li a .cnt {
+        display: none;
+    }
+   
+    .news .more {
+        position: relative;
+        right: auto;
+        top: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .news .more a {
+        align-items: center;
+        justify-content: space-between;
+        width: 140px;
+        height: 35px;
+        padding: 0 8px 0 14px;
+        border: 1px solid #666666;
+        border-radius: 18px;
+    }
+    .news .more a span {
+        margin: 0;
+    }
+    .news .more a i {
+        font-size: 15px;
+    }
+    
+}
+
+.link {
+    height: 402px;
+    background: url(../images/main/link_bg.png) no-repeat center center / cover;
+    margin: 100px 0 0 0;
+}
+.link h2 {
+    padding: 86px 0 41px 0;
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.link ul span {
+    display: block;
+}
+.link ul {
+    display: flex;
+    justify-content: space-between;
+}
+.link ul li {
+    width: 440px;
+    background-color: #FFF;
+    transition: 0.5s;
+}
+.link ul li a {
+    display: flex;
+    align-items: center;
+    height: 95px;
+}
+.link ul li a i {
+    margin: 0 42px 0 43px;
+    font-size: 46px;
+    color: #666;
+}
+.link ul li a h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.link ul li a p {
+    color: #666666;
+}
+.link ul li:hover {
+    transform: translate(-10px, -10px);
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width:640px) {
+    .link {
+        height: 402px;
+        background: url(../images/main/link_bg.png) no-repeat center center / cover;
+        margin: 100px 0 0 0;
+    }
+    .link h2 {
+        padding: 86px 0 41px 0;
+        color: #FFF;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.2;
+    }
+    .link ul span {
+        display: block;
+    }
+    .link ul {
+       flex-wrap: wrap;
+    }
+    .link ul li {
+        width: 32%;
+    }
+    .link ul li a {
+        flex-direction: column;
+        height: 104px;
+    }
+    .link ul li a i {
+        margin: 17px 0 8px 0;
+        font-size: 35px;
+    }
+    .link ul li a h3 {
+       display: none;
+    }
+    .link ul li a p {
+        text-align: center;
+        line-height: 1.1;
+    }
+    .link ul li a p span {
+        display: block;
+    }
+    .link ul li:hover {
+        transform: translate(-10px, -10px);
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    }
+    
+}
