@@ -43,6 +43,11 @@ html, body {
 .clearfix::after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
 
+.cnt_wrap {
+    position: relative;
+}
+
+
 .header {
     position: absolute;
     left: 0;
@@ -448,3 +453,114 @@ html, body {
     }
 
 }/* header 반응형 종료 */
+
+.footer {
+    background-color: #121212;
+    color: #ffffff;
+
+}
+.footer .family {
+    position: absolute;
+    right: 0;
+    top: 60px;
+}
+.footer .family .inner {
+    width: 190px;
+    position: relative;
+}
+.footer .family button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 0 7px 0 13px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 5px;
+}
+.footer .family button i {
+    color: rgba(255,255,255,0.6);
+    font-size: 18px;
+}
+.footer .family ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px 0 22px 22px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-bottom-width: 0;
+    border-radius: 5px 5px 0 0;
+    background-color: #121212;
+}
+.footer .family ul li a {
+    line-height: 30px;
+}
+.footer .family ul li a:hover {
+    color: #ED1C24;
+    font-weight: 700;
+}
+.footer .family .open {
+    display: none;
+}
+.footer .family.open ul {
+    display: block;
+}
+.footer .family .btn_close {
+    display: flex;
+    border-radius: 0 0 5px 5px;
+}
+
+.footer .fnav {
+    display: flex;
+    padding: 57px 0 0 0;
+}
+.footer .fnav li {
+    margin: 0 21px 0 0;
+}
+.footer .copyright {
+    color: rgba(255,255,255,0.6);
+    padding: 15px 0 64px 0;
+}
+
+
+@media screen and (max-width:640px) {
+    .footer .family {
+        position: relative;
+        right: auto;
+        top: auto;
+        display: flex;
+        padding: 49px 0 0 0;
+        justify-content: center;
+    }
+    .footer .family .inner {
+        width: 180px;
+    }
+    .footer .family button {    
+        height: 35px;
+        padding: 0 6px 0 13px;
+    }
+    .footer .family button i {
+        font-size: 16px;
+    }
+    .footer .family ul {
+        bottom: 35px;
+        padding: 10px 0 15px 15px;
+    }
+    .footer .family ul li a {
+        line-height: 26px;
+    }
+    
+    .footer .fnav {
+        flex-wrap: wrap;
+        padding: 37px 0 0 0;
+    }
+    .footer .fnav li {
+        margin: 0 19px 0 0;
+    }
+    .footer .copyright {
+        color: rgba(255,255,255,0.6);
+        padding: 13px 0 51px 0;
+    }
+}
