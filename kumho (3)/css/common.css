@@ -163,7 +163,7 @@ html, body {
     display: block;
     line-height: 36px;
 }
-.header .gnb > ul > li > ul > li > a:hover
+.header .gnb > ul > li > ul > li > a:hover, 
 .header .gnb > ul > li > ul > li.now > a {
     color: #ED1C24;
     font-weight: 700;
