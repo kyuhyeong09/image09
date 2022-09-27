@@ -1,0 +1,149 @@
+@import url(default.css);
+
+.visual {
+    position: relative;
+}
+.visual .inner {
+    display: flex;
+}
+.visual .inner .inner2 {
+    background-image: url(../image/visual_01.png);
+    width: 960px;
+    height: 800px;
+    color: #fff;
+}
+.visual .inner .inner2 .color01 {
+    margin: 330px 0 170px 0;
+    background-color: #023665;
+    width: 500px;
+    height: 300px;
+    float:right;
+}
+.visual .inner .inner2 h2 {
+    padding: 50px 60px 0 0;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: right;
+}
+.visual .more01 {
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 419px;
+    z-index: 3;
+    /*청록색 배경 위에 배치하기 위해서 z-index를 더 높은 숫자로*/
+    color: #fff;
+}
+.visual .more01::after {
+    position: absolute;
+    right: 164px;
+    top: 168px;
+    width: 434px;
+    height: 3px;
+    background-color: #B70002;
+    content: "";
+}
+
+
+.visual .inner .inner3 {
+    background-image: url(../image/visual_02.png);
+    width: 960px;
+    height: 800px;
+    color: #fff;
+}
+.visual .inner .inner3 .color02 {
+    margin: 182px 0 0 0;
+    background-color: #B70002;
+    width: 500px;
+    height: 300px;
+    float: left;
+}
+.visual .inner .inner3 h2 {
+    margin: 61px 0 0 0;
+    font-size: 35px;
+    font-weight: 400;
+}
+.visual .more02 {
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 419px;
+    z-index: 3;
+    /*청록색 배경 위에 배치하기 위해서 z-index를 더 높은 숫자로*/
+    color: #fff;
+}
+.visual .more02::after {
+    position: absolute;
+    right: -343px;
+    top: -8px;
+    width: 402px;
+    height: 3px;
+    background-color: #ffffff;
+    content: "";
+}
+
+.second {
+    background-image: url(../image/second_bg.png) ;
+    background-repeat: no-repeat;
+    display: block;
+    padding: 207px 0 0 0;
+    color: #fff;
+    height: 600px;
+    text-align: center;
+}
+
+.second .line {
+    position: absolute;
+    left: calc(50% + 100px);
+    top: 419px;
+    z-index: 3;
+    /*청록색 배경 위에 배치하기 위해서 z-index를 더 높은 숫자로*/
+    color: #fff;
+}
+.second .line::after {
+    position: absolute;
+    right: 71px;
+    top: 600px;
+    width: 57px;
+    height: 1px;
+    background-color: #ffffff;
+    content: "";
+}
+
+.second .icon {
+    display: block;
+    margin: 69px 0 0 492px;
+    float: left;
+}
+.second .icon ul li {
+    display: block;
+    float: left;
+    margin: 0 91px 0 0;
+} 
+.second .icon ul li i {
+    display: block;
+    font-size: 50px;
+}
+.second .icon ul li span {
+    display: block;
+    margin: 8px 0 0 0;
+    font-size: 17px;
+    font-weight: 400;
+}
+.second h2 {
+    font-size: 15px;
+    font-weight: 700;
+}
+.second strong {
+    display: block;
+    margin: 10px 0 5px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.second span {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.last {
+    background-image: url(../image/last_bg.png);
+    color: #fff;
+}
