@@ -2,3 +2,117 @@
 @import url('common.css');
 
 /*메인에 있는 스타일만 정의*/
+
+
+.visual {
+    position: relative;
+    height: 100vh; /* 브라우저 높이의 100% */
+    background: url(../images/main/visual_bg.png) no-repeat center center/ cover;
+    color: #fff;
+}
+.visual .visual_wrap {
+    position: absolute;
+    left: calc(50% - 700px);
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.visual h2 {
+    margin: 0 0 44px 0;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+.visual h2 strong {
+    display: block;
+    margin: 10px 0 0 0;
+    font-weight: 700;
+}
+.visual .search {
+    width: 523px;
+    height: 82px;
+    border: 3px solid #fff;
+    border-radius: 40px;
+}
+.visual .search label {
+    display: none; /* 접근성 때문에 준 태그*/
+}
+
+.visual .search input[type="text"] {
+    float: left;
+    width: 392px;
+    height: 76px;
+    margin: 0 0 0 33px;
+    border: 0;
+    outline: 0; /* focus가 되었을때 테두리 생성되는 것*/
+    background-color: transparent;/*투명*/
+    font-size: 30px;
+} 
+.visual .search input[type="text"]::placeholder {
+    color: rgba(255,255,255,0.3);
+}
+.visual .search .btn {
+    float: left; /* 키워드입련란하고 버튼 사이영백 삭제*/
+    width: 82px;
+    height: 76px;
+}
+.visual .search input.btn {
+    border: 0;
+    background: transparent url(../images/main/search_ico.svg) no-repeat center center;
+    font-size: 0;
+    cursor: pointer; 
+}
+.visual .search button.btn span {
+    display: none;
+}
+.visual .search button.btn i {
+    font-size: 30px;
+}
+
+@media screen and (max-width:640px) {
+    .visual {
+        height: 326px; /* 브라우저 높이의 100% */
+    }
+    .visual .visual_wrap {
+        left: 20px;
+    }
+    .visual h2 {
+        margin: 0 0 44px 0;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.25;
+    }
+    .visual h2 strong {
+        display: block;
+        margin: 10px 0 0 0;
+        font-weight: 700;
+    }
+    .visual .search {
+        width: 187px;
+        height: 29px;
+    }
+    .visual .search label {
+        display: none; /* 접근성 때문에 준 태그*/
+    }
+    
+    .visual .search input[type="text"] {
+        float: left;
+        width: 392px;
+        height: 76px;
+        margin: 0 0 0 33px;
+        border: 0;
+        outline: 0; /* focus가 되었을때 테두리 생성되는 것*/
+        background-color: transparent;/*투명*/
+        font-size: 30px;
+    } 
+   
+    .visual .search .btn {
+        width: 31px;
+        height: 35px;
+    }
+    .visual .search input.btn {
+       background-size: 13px;
+    }
+    .visual .search button.btn i {
+        font-size: 10px;
+    }
+}

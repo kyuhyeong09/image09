@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g id="sns_facebook" transform="translate(-33.2 -15.5)">
+    <g id="그룹_50" data-name="그룹 50" transform="translate(33.2 15.5)">
+      <path id="패스_73" data-name="패스 73" d="M42.472,45.5V31.173H33.2V26.216h9.272V20.868c0-3.221,5.709-5.368,10.345-5.368H63.2v4.489H58.411c-2.375,0-5.517.976-5.517,2.186v4.06h9.349v4.938H52.893V45.5H42.472Z" transform="translate(-33.2 -15.5)" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
