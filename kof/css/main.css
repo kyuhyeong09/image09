@@ -1,20 +1,24 @@
 @import url('default.css');
 @import url('common.css');
 
-/*메인에 있는 스타일만 정의*/
-
+/* 메인에 있는 스타일만 정의 */
 
 .visual {
     position: relative;
     height: 100vh; /* 브라우저 높이의 100% */
-    background: url(../images/main/visual_bg.png) no-repeat center center/ cover;
-    color: #fff;
+    background: url(../images/main/visual_bg.png) no-repeat center center / cover;
+    color: #FFF;
 }
 .visual .visual_wrap {
     position: absolute;
     left: calc(50% - 700px);
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(0, -50%); 
+    /* 해당요소의 넓이와 높이를 계산해서 그 값의 50%를 왼쪽 오른쪽으로 이동 
+       top: 50%;을 주면 위아래 가운데에서 시작해서 아래로 콘텐츠가 배치됨
+       콘텐츠의 위아래 여백을 동일하게 주려면 (즉, 콘텐츠가 자기 높이의 절반이 위로 이동)
+       transform: translate(좌우이동값, 위아래이동값:-50%)을 주면 됨.
+    */
 }
 .visual h2 {
     margin: 0 0 44px 0;
@@ -24,95 +28,216 @@
 }
 .visual h2 strong {
     display: block;
-    margin: 10px 0 0 0;
+    margin: 17px 0 0 0;
     font-weight: 700;
 }
 .visual .search {
-    width: 523px;
-    height: 82px;
-    border: 3px solid #fff;
-    border-radius: 40px;
+    width: 460px;
+    height: 60px;
+    border: 2px solid #FFF;
+    border-radius: 30px;
 }
 .visual .search label {
-    display: none; /* 접근성 때문에 준 태그*/
+    display: none; /* 접근성 때문에 준 태그 */
 }
-
 .visual .search input[type="text"] {
+    /* <input type="text" />라고 되어 있는 태그만 지칭 */
     float: left;
-    width: 392px;
-    height: 76px;
-    margin: 0 0 0 33px;
+    width: 370px;
+    height: 55px;
+    margin: 0 0 0 30px;
     border: 0;
-    outline: 0; /* focus가 되었을때 테두리 생성되는 것*/
-    background-color: transparent;/*투명*/
-    font-size: 30px;
-} 
+    outline: 0; /* focus가 되었을때 테두리 생성되는 것 삭제 */
+    background-color: transparent;
+    font-size: 20px;
+}
 .visual .search input[type="text"]::placeholder {
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.5);
 }
 .visual .search .btn {
-    float: left; /* 키워드입련란하고 버튼 사이영백 삭제*/
-    width: 82px;
-    height: 76px;
+    float: left; /* 키워드입력란하고 버튼 사이여백 삭제 */
+    width: 55px;
+    height: 55px;
 }
 .visual .search input.btn {
-    border: 0;
-    background: transparent url(../images/main/search_ico.svg) no-repeat center center;
-    font-size: 0;
-    cursor: pointer; 
+    border: 0; 
+    background-color: transparent;
+    background-image: url(../images/main/search_ico.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 0; /* 버튼 글자 없애기 */
+    cursor: pointer; /* 마우스 오버시 손바닥 모양 */
 }
 .visual .search button.btn span {
     display: none;
 }
 .visual .search button.btn i {
-    font-size: 30px;
+    margin: 3px 0 0 0;
+    font-size: 21px;
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:640px){
     .visual {
-        height: 326px; /* 브라우저 높이의 100% */
+        height: 346px;
     }
     .visual .visual_wrap {
         left: 20px;
     }
     .visual h2 {
-        margin: 0 0 44px 0;
+        margin: 0 0 25px 0;
         font-size: 20px;
-        font-weight: 400;
-        line-height: 1.25;
     }
     .visual h2 strong {
-        display: block;
-        margin: 10px 0 0 0;
-        font-weight: 700;
+        margin: 8px 0 0 0;
     }
     .visual .search {
-        width: 187px;
-        height: 29px;
+        width: 224px;
+        height: 39px;
+        border-radius: 20px;
     }
-    .visual .search label {
-        display: none; /* 접근성 때문에 준 태그*/
-    }
-    
     .visual .search input[type="text"] {
-        float: left;
-        width: 392px;
-        height: 76px;
-        margin: 0 0 0 33px;
-        border: 0;
-        outline: 0; /* focus가 되었을때 테두리 생성되는 것*/
-        background-color: transparent;/*투명*/
-        font-size: 30px;
-    } 
-   
+        /* <input type="text" />라고 되어 있는 태그만 지칭 */
+        width: 170px;
+        height: 35px; /* search 높이 - border값 */
+        margin: 0 0 0 17px;
+        font-size: 13px;
+    }
     .visual .search .btn {
         width: 31px;
         height: 35px;
     }
     .visual .search input.btn {
-       background-size: 13px;
+        background-size: 13px; 
+        /* 사이즈를 하나만 입력하면 넓이가 조정됨 - 높이는 비율에 맞게 알아서 조절 */
     }
     .visual .search button.btn i {
-        font-size: 10px;
+        margin: 4px 0 0 0;
+        font-size: 13px;
+    }
+}
+
+.part {
+    margin: 117px 0 0 0;
+}
+.part h2 {
+    position: relative;
+    margin: 0 0 42px 0;
+    color: #3d3d3d;
+    font-size: 50px;
+    font-weight: 700;
+}
+.part h2::before {
+    position: absolute;
+    left: 3px;
+    top: 1px;
+    width: 92px;
+    height: 3px;
+    background-color: #000000;
+    content: "";
+}
+.part .list ul {
+    width: 2400px;
+    margin-left: -480px; /* 하나의 li의 넓이 + 여백 */
+}
+.part .list ul li {
+    float: left;
+    width: 440px;
+    margin: 0 40px 0 0;
+}
+.part .list ul li a {
+    display: block;
+}
+.part .list ul li a .pic {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.part .list ul li a .pic img {
+    width: 100px;
+    transition: 0.5s;
+}
+.part .list ul li a:hover .pic img {
+    transform: scale3d(1.2, 1.2, 1);
+}
+.part .list ul li a h3 {
+    margin: 15px 0 15px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+.part .list ul li a p {
+    line-height: 1.5;
+    height: 3em;
+    overflow: hidden;
+}
+.part .more {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 192px;
+    height: 60px;
+    border: 2px solid #3d3d3d;
+    border-radius: 30px;
+}
+
+.part .more i {
+    color: #3d3d3d;
+    font-size: 25px;
+}
+
+@media screen and (max-width:640px) {
+    .part {
+        margin: 60px 0 0 0;
+    }
+    .part h2 {
+        margin: 0 0 16px 0;
+        font-size: 25px;
+    }
+    .part h2::before {
+        position: absolute;
+        left: 3px;
+        top: 1px;
+        width: 92px;
+        height: 3px;
+        content: "";
+    }
+    .part .list {
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+    }
+    .part .list ul {
+        width: 1104px;
+        margin-left: 0; /* 하나의 li의 넓이 + 여백 */
+    }
+    .part .list ul li {
+        width: 208px;
+        margin: 0 16px 0 0;
+    }
+    .part .list ul li:last-child {
+        margin-right: 0;
+    }
+    .part .list ul li a h3 {
+        margin: 16px 0 7px 0;
+        font-size: 20px;
+    }
+ 
+    .part .more {
+        top: 2px;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        padding: 0;
+        border-radius: 15px;
+    }
+    .part .more span {
+        display: none;
+    }
+    
+    .part .more i {
+        color: #000000;
+        font-size: 12px;
     }
 }
