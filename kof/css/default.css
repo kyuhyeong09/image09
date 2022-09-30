@@ -22,7 +22,7 @@ em, address {
 ul, ol, li {
     list-style: none;
 }
-/* form태그가 문자 스타일을 상속받지 않아서 상속받게 하기위해*/
+/* form태그가 문자 스타일을 상속받지 않아서 상속받게 하기 */
 form, input, select, textarea, button {
     color: inherit;
     font-family: inherit;
@@ -37,11 +37,10 @@ fieldset {
     border: 0;
 }
 legend {
-    display: none;
+    display: none; /* form 태그의 legend은 타이틀로 숨김처리 */
 }
 button {
     background-color: transparent; /* 투명 */
-    border: 0;
+    border: 0;    
     cursor: pointer; /* 마우스 오버 시 손바닥 모양 */
 }
-
