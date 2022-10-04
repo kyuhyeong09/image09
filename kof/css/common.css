@@ -304,3 +304,174 @@ html, body {
     }
 
 }/* header 모바일 스타일 */
+
+/* common.css 모든 페이지에서 호출. .top이라고만 스타일주면 다른 콘텐츠에서 top이라고 
+   클래스명을 주면 해당 스타일이 적용됨. 
+   절대 콘텐츠 페이지에서 사용하지 않을 이름으로 줘야함. 
+   aside라는 태그가 거의 사용하지 않는 태그라 aside.top이라고 함 */
+aside.top {
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 150px;
+    z-index: 250;
+}
+aside.top button {
+    width: 50px;
+    height: 60px;
+    background-color: #0059A8;
+    border-radius: 0 5px 0 5px;
+    color: #FFF;
+}
+aside.top button span {
+    display: none;
+}
+aside.top button i {
+    font-size: 20px;
+}
+
+@media screen and (max-width:640px) {
+    aside.top {
+        position: absolute;
+        bottom: 240px;
+    }
+    aside.top button {
+        width: 40px;
+        height: 30px;
+    }
+    aside.top button i {
+        font-size: 13px;
+    }
+}
+
+
+.footer {
+    background-color: #242d36;
+    color: rgba(255,255,255,0.8);
+}
+.footer .sns {
+    position: absolute;
+    right: 0;
+    top: 49px;
+}
+.footer .sns ul li {
+    float: left;
+    width: 40px;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.3);
+}
+.footer .sns ul li:first-child {
+    border-left-width: 1px;
+}
+.footer .sns ul li a {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.footer .flogo {
+    float: left;
+    margin: 55px 75px 0 0;
+}
+.footer .flogo img {
+    width: 120px;
+}
+.footer .inner {
+    float: left;
+    margin: 55px 0 0 0;
+}
+.footer .fnav li {
+    position: relative;
+    float: left;
+    margin: 0 38px 0 0;
+}
+.footer .fnav li::after {
+    position: absolute;
+    right: -21px;
+    top: 5px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.3);
+    content: "";
+}
+.footer .fnav li:last-child::after {
+    display: none;
+}
+
+.footer .finfo {
+    margin: 32px 0 9px 0;
+}
+.footer .finfo span {
+    display: inline-block;
+    margin: 0 33px 0 0;
+}
+.footer .copyright {
+    margin: 0 0 98px 0;
+    color: rgba(255,255,255,0.6);
+}
+
+@media screen and (max-width:640px) {
+    .footer .sns {
+        position: relative;
+        right: auto;
+        top: auto;
+        height: 75px;
+        /* ul을 가운데 정렬 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer .sns::after {
+        position: absolute;
+        left: -20px;
+        bottom: 0;
+        width: calc(100% + 40px);
+        height: 1px;
+        border-color: rgba(255,255,255,0.2);
+        content: "";
+    }
+    .footer .sns ul li {
+        border-width: 0;
+    }
+    .footer .sns ul li:first-child {
+        border-left-width: 0;
+    }
+    .footer .sns ul li a {
+        width: 10px;
+        height: 10px;
+    }
+    .footer .sns ul li a img {
+        transform: scale(1.14, 1.14);
+    }
+    .footer .flogo {
+        float: none;
+        margin: 35px 0 35px 0;
+    }
+    .footer .flogo img {
+        width: 102px;
+    }
+    .footer .inner {
+        float: none;
+        margin: 0;
+    }
+    .footer .fnav li {
+        margin: 0 31px 5px 0;
+    }
+    .footer .fnav li::after {
+        right: -18px;
+        height: 11px;
+    }
+    
+    .footer .finfo {
+        margin: 28px 0 18px 0;
+    }
+    .footer .finfo span {
+        margin: 0 26px 5px 0;
+    }
+    .footer .copyright {
+        margin: 0 0 46px 0;
+    }
+}
