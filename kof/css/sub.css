@@ -215,3 +215,8 @@
         font-size: 30px;
     }
 }
+
+.contents .table_wrap table {
+    width: 100%;
+    border-collapse: collapse;
+}
