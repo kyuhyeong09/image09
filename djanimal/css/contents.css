@@ -1,0 +1,119 @@
+
+.content .cnt_introduce p {
+    margin: 100px 0 0 0;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3d3d3d;
+}  
+
+.content .pic .tit h2 {
+    margin: 211px 0 66px 0;
+    font-size: 30px;
+    font-weight: 700;
+    color: #3d3d3d;
+}
+
+.content .pic .dog {
+    background-color: #F8F9FA;
+}
+
+.content .pic .dog ul {
+    display: flex;
+    flex-direction: column;
+}
+.content .pic .dog ul strong {
+    font-size: 30px;
+    font-weight: 700;
+    color: #00AE4D;
+    padding: 50px 0 0 0;
+}
+
+.content .pic .dog ul p {
+    margin: 29px 0 313px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #3d3d3d;
+}
+.content .pic .dog ul li.dog01 {
+    background-image: url(../images/main/test01.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.content .pic .dog ul li.dog02 {
+    background-image: url(../images/main/test02.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.content .pic .dog ul li.dog03 {
+    background-image: url(../images/main/test03.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width:640px) {
+    .content .cnt_introduce p {
+        margin: 52px 0 0 0;
+        font-size: 15px;
+    }  
+    
+    .content .pic .tit h2 {
+        margin: 52px 0 42px 0;
+        font-size: 20px;
+    }
+    
+    .content .pic .dog {
+        background-color: none;
+    }
+    
+    .content .pic .dog ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .content .pic .dog ul strong {
+        font-size: 30px;
+        font-weight: 700;
+        color: #00AE4D;
+        padding: 50px 0 0 0;
+    }
+    
+    .content .pic .dog ul p {
+        margin: 16px 0 16px 0;
+        font-size: 10px;
+        
+    }
+    .content .pic .dog ul li.dog01 {
+        background-image: none;
+    }
+    .content .pic .dog ul li.dog01 strong {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .content .pic .dog ul li.dog01 p {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .content .pic .dog ul li.dog02 strong {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .content .pic .dog ul li.dog02 p {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .content .pic .dog ul li.dog03 strong {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    .content .pic .dog ul li.dog03 p {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .content .pic .dog ul li.dog02 {
+        background-image: none;
+    }
+    .content .pic .dog ul li.dog03 {
+        background-image: none;
+    }
+}
