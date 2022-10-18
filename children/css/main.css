@@ -1,0 +1,40 @@
+@import url(default.css);
+@import url(common.css);
+
+
+.visual {
+    background-color: #EC1C1C;
+    color: #fff;
+}
+.count {
+    background-color: #2678d6;
+    color: #fff;
+}
+.biz {
+    background-color: #EC1C1C;
+    color: #fff;
+}
+.news {
+    background-color: #2678d6;
+    color: #fff;
+}
+.support {
+    background-color: #EC1C1C;
+    color: #fff;
+}
+
+.visual h2 {
+    display: none;
+}
+.visual video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.fp-watermark {
+    display: none;
+}
