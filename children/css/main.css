@@ -2,7 +2,7 @@
 @import url(common.css);
 
 
-.visual {
+/* .visual {
     background-color: #EC1C1C;
     color: #fff;
 }
@@ -21,20 +21,251 @@
 .support {
     background-color: #EC1C1C;
     color: #fff;
-}
+} */
 
 .visual h2 {
-    display: none;
+    position: absolute;
+    left: calc(50% - 700px);
+    top: 50%;
+    z-index: 12;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.1;
+    transform: translate(0 , -50%);
 }
 .visual video {
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
+    z-index: 10;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.fp-watermark {
+
+.visual .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 11;
+    background-color: rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width:1440px) {
+    .visual h2 {
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .visual h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .fp-responsive .fp-is-overflow .fp-section {
+        min-height: auto !important;
+    }
+    .visual .inner {
+        height: 330px;
+    }
+    .visual h2 {
+        font-size: 20px;
+    }
+}
+
+.count {
+    background-color: #C79E6A;
+}
+.count .tit {
+    margin: 0 0 0 50px;
+}
+.count .tit h2 {
+    margin: 0 0 29px 0;
+    font-size: 40px;
+    line-height: 1.2;
+}
+.count .tit h2 strong {
+    font-weight: 700;
+}
+.count .tit p span {
+    display: block;
+}
+.count .rate {
+    position: absolute;
+    left: 950px;
+    top: 275px;
+    transform: translate(50% + 140px);
+}
+.count .rate  li {
+    margin: 0 0 70px 0;
+}
+
+.count .rate  li::after {
+    position: absolute;
+    left: 0;
+    top: 93px;
+    z-index: -1;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.6);
+    content: "";
+}
+
+.count .rate  li:last-child {
+    margin-bottom: 0;
+}
+.count .rate  li .num strong {
+    display: inline-block;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.count .rate  li .num span {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0 5px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.count .rate  li .num span::after {
+    position: absolute;
+    right: -31px;
+    top: 39px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255,255,255,0.6);
+    content: "";
+}
+
+
+
+
+.biz {
+    background-color: #61564B;
+}
+.news {
+    background-color: #F5E5E6;
+}
+.support {
+
+}
+.footer {
+
+}
+
+/* 오른쪽 네비게이션 디자인 변경 */
+body #fp-nav ul li {
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+}
+body #fp-nav ul li:last-child {
     display: none;
+}
+body #fp-nav ul li a span,
+body #fp-nav ul li:hover a span {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    background: #fff;
+    left: 0;
+    top: 0;
+    margin: 0;
+    
+}
+
+body #fp-nav ul li a.active span,
+body #fp-nav ul li:hover a.active span {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #FC0D0D;
+}
+body #fp-nav ul li .fp-tooltip {
+    overflow: visible;
+    top: -2px;
+    background-color: #1d1d1d;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
+    max-width: max-content;
+    padding: 0 10px;
+    overflow: visible;
+    width: auto;
+}
+body #fp-nav ul li .fp-tooltip::after {
+    position: absolute;
+
+}
+
+
+
+
+
+.fp-watermark { /* fullpage copyright 삭제 */
+    display: none;
+}
+
+
+@media screen and (max-width:640px) { 
+    .count {
+        padding: 45px 0 65px 0;
+    }
+    
+    .count .tit {
+        margin: 0 0 0 50px;
+    }
+    .count .tit h2 {
+        margin: 0 0 29px 0;
+        font-size: 30px;
+    }
+    .count .tit h2 strong {
+        font-weight: 700;
+    }
+    .count .tit p span {
+        display: block;
+    }
+    .count .rate {
+        position: absolute;
+        left: 950px;
+        top: 275px;
+        transform: translate(50% + 140px);
+    }
+    .count .rate  li {
+        margin: 0 0 70px 0;
+    }
+    
+    .count .rate li::after {
+        top: 93px;
+        width: 100%;
+    }
+    
+    .count .rate  li:last-child {
+        margin-bottom: 0;
+    }
+    .count .rate  li .num strong {
+        font-size: 30px;
+    }
+    .count .rate  li .num span {
+        margin: 0 5px 0 5px;
+        font-size: 20px;
+    }
+    
+    .count .rate  li .num span::after {
+        position: absolute;
+        right: -31px;
+        top: 39px;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255,255,255,0.6);
+        content: "";
+    }
 }
