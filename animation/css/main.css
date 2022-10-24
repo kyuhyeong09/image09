@@ -1,0 +1,100 @@
+@import url(default.css);
+@import url(common.css);
+
+.tour {
+    height: 482px;
+    background-color: #13885E;
+    color: #fff;
+}
+.tour h2 {
+    padding: 64px 0 53px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.tour ul li {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 130px;
+    margin: 0 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    text-align: center;
+}
+.tour ul li a {
+    display: block;
+    height: 150px;
+}
+.tour ul li a i {
+    padding: 37px 0 10px 0;
+    font-size: 42px;
+}
+.tour ul li a strong {
+    display: block;
+}
+.tour ul li a .btn_wrap {
+    display: block;
+}
+.tour ul li a .out,
+.tour ul li a .over {
+    display: block;
+    height: 150px;
+}
+.tour ul li a .over {
+    background-color: #fff;
+    color: #13885E;
+}
+.tour ul li a .up {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #13885E;
+}
+
+
+/* 오버효과 */
+
+.tour ul li.ico1 a i {
+    transition: 1s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico1 a:hover i {
+    transform: rotateY(360deg);
+} 
+.tour ul li.ico2 a {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico2 a:hover {
+    background-color: #fff;
+    color: #13885E;
+}
+.tour ul li.ico3 a .btn_wrap {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico3 a:hover .btn_wrap {
+    transform: translate(0 , -150px);
+}
+.tour ul li.ico4 a .up_wrap {
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.tour ul li.ico4 a:hover .up_wrap {
+    height: 100%;
+}
+.slide {
+    margin: 100px 0;
+}
+.slide .slide_wrap .slide_cnt {
+    position: relative;
+}
+.slide .slide_wrap .slide_cnt h2 {
+    position: absolute;
+    right: 240px;
+    top: 137px;
+    font-size: 40px;
+    color: #fff;
+}
