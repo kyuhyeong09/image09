@@ -98,3 +98,199 @@
     font-size: 40px;
     color: #fff;
 }
+.tour ul li.ico5 a:hover i {
+    animation-name: ico_rotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+@keyframes ico_rotate {
+    0% { transform: rotateY(0deg) }
+    100% { transform: rotateY(360deg) }
+}
+
+.tour .circle_txt {
+    position: absolute;
+    right: -20px;
+    top: 40px;
+    width: 285px;
+    height: 285px;
+    background: url(../image/circle_txt.svg) no-repeat right bottom;
+    animation-name: circle_rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes circle_rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.tour .circle {
+    position: absolute;
+    left: -125px;
+    top: 30px;
+    width: 171px;
+    height: 171px;
+    background: url(../image/circle.svg) no-repeat center center;
+    animation-name: circle_rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.media h2 {
+    margin: 100px 0 20px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+.media ul li {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 440px;
+    margin: 0 40px 0 0;
+}
+.media ul li:last-child {
+    margin-right: 0;
+}
+.media ul li a {
+    display: block;
+}
+.media ul li.list1 a {
+    height: 371px;
+    padding: 15px 15px 0 15px; 
+    border: 1px solid #cccccc; 
+}
+.media ul li.list1 a .pic {
+    overflow: hidden;
+    height: 212px;
+}
+.media ul li.list1 a .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list1 a h3 {
+    margin: 20px 0 0 0;
+    font-size: 25px;
+}
+.media ul li.list1 a .over {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    padding: 30px 20px 0 20px;
+    background-color: #115598;
+    color: #fff;
+}
+.media ul li.list1 a .over strong {
+    display: block;
+    margin: 0 0 10px 0;
+    font-size: 25px;
+}
+.media ul li.list1 a .over .txt {
+    display: block;
+    color: rgba(255,255,255,0.8);
+    overflow: hidden;
+    line-height: 1.5;
+    height: 7.5em;
+}
+.media ul li.list1 a .over .date {
+    display: block;
+    color: rgba(255,255,255,0.8);
+    margin: 25px 0 0 0;
+}
+.media ul li.list1 a .over {
+    transition: 0.5s;
+}
+.media ul li.list1 a:hover .over {
+    top: 0;
+}
+
+.media ul li.list2 a .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.media ul li.list2 a h3 {
+    position: absolute;
+    left: 20px;
+    top: 257px;
+    width: calc(100% - 40px);
+    color: #fff;
+    font-size: 25px;
+}
+.media ul li.list2 a p {
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    top: 300px;
+    width: calc(100% - 40px);
+    color: rgba(255,255,255,0.8);
+}
+.media ul li.list2 a:hover .pic::after {
+    opacity: 1;
+}
+.media ul li.list2 a .pic::after {
+    transition: 0.5s;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.2); */
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8));
+    content: "";
+}
+
+.media ul li.list2 a h3 {
+    transition: 0.5s;
+}
+.media ul li.list2 a p {
+    transition: 0.5s;
+}
+.media ul li.list2 a:hover h3 {
+    top: 170px;
+}
+.media ul li.list2 a:hover p {
+    opacity: 1;
+    top: 257px;
+}
+.media ul li.list3 a .pic {
+    overflow: hidden;
+    height: 215px;
+}
+.media ul li.list3 a .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.media ul li.list3 a h3 {
+    position: relative;
+    margin: 10px 0 25px 0;
+    font-size: 25px;
+}
+.media ul li.list3 a h3::after {
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    width: 100%;
+    height: 2px;
+    background-color: #3d3d3d;
+    content: "";
+}
+.media ul li.list3 a p {
+    overflow: hidden;
+    line-height: 1.5;
+    height: 3em;
+}
