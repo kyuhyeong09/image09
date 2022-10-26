@@ -1,0 +1,55 @@
+@import "_var.scss";
+@import "_default.scss";
+@import "_common.scss";
+
+
+/* 
+    scss 내에서 import할 default와 common 등의 파일은
+    파일명 앞에 _(언더바)를 입력하면 sass컴파일러가 해당 팡리은 컴파일 하지 않음
+    main.css나 sub.css에서 default, common을 필요에 따라서 import 해서 사용하면 됨.
+    
+    
+*/
+
+
+.visual {
+    position: relative;
+    .tit {
+        position: absolute;
+        left: calc(50% - 700px);
+        top: 50%;
+        z-index: 10;
+        color: #FFF;
+    }
+    strong {
+        display: block;
+    }
+    h2 {
+        @include font_serif;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    .popup{
+        height: 100vh;
+        .btn_wrap {
+            position: absolute;
+            left: calc(50% - 700px);
+            top: calc(50% + 180px);
+            z-index: 10;
+            .btn_paging {
+                span {
+                    opacity: 0.5;
+                    width: 70px;
+                    height: 4px;
+                    background-color: #fff;
+                    border-radius: 0;
+                    &.swiper-pagination-bullet-active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+    }
+}
