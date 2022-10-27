@@ -1,3 +1,21 @@
+$basic_color : #3D3D3D;
+$tit_color : #1d1d1d;
+$gray_color : #666666;
+$gray_light_color : #f4f4f4;
+$w_basic_color : rgba(255,255,255,0.8);
+$w_tit_color : #ffffff;
+$w_dark_light_color : rgba(255,255,255,0.6);
+$w_light_color : rgba(255,255,255,0.1);
+
+
+
+
+
 @mixin font_serif {
     font-family: 'Noto Serif KR', serif;
+}
+
+@mixin zindex_top {
+    position: relative;
+    z-index: 10;
 }
