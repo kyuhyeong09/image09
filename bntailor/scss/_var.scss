@@ -19,3 +19,8 @@ $w_light_color : rgba(255,255,255,0.1);
     position: relative;
     z-index: 10;
 }
+
+@mixin clearfix {
+    display: block;
+    &::after {display:block;clear:both;content:".";visibility:hidden;height:0;}
+}

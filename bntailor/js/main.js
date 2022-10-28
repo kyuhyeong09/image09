@@ -1,10 +1,10 @@
 $(document).ready(function(){
-    const swiper = new Swiper('.swiper', { /* 팝업을 감싼는 요소의 class명 */
+    const swiper = new Swiper('.visual .popup', { /* 팝업을 감싼는 요소의 class명 */
 
         effect: "fade", /* fade 효과 */
 
         autoplay: {  /* 팝업 자동 실행 */
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: true,
         },
 
@@ -14,31 +14,95 @@ $(document).ready(function(){
             el: '.btn_paging', /* 해당 요소의 class명 */
             clickable: true,  /* 클릭하면 해당 팝업으로 이동할 것인지 값 */
         },
-    });
+
+    });// visual swiper
+
+    /* visual popup의 정지버튼/재생버튼 
+        하나의 버튼이 두가지 기능
+        정지와 재생 기능을 구분하는 값.... 
+        btn_stop 버튼에 play클래스가 없으면 일시정지
+        play클래스가 있으면 재생
+    */
     $('.visual .popup .btn_stop').on('click', function(){
-        let popStatus = $(this).hasClass('play');
-        if(popStatus == true){
+        let popStatus = $(this).hasClass('play'); //true면 play가 있다는 이야기 - 재생기능실행
+        if(popStatus == true){ //버튼의 상태가 play모양 - 현재 정지상태 - 재생기능을 실행
             swiper.autoplay.start();
             $(this).removeClass('play');
             $(this).text('일시정지');
-        }else{
+        }else{//버튼의 상태가 일시정지 모양 - 현재 재생상태 - 일시정지 기능을 실행
             swiper.autoplay.stop();
             $(this).addClass('play');
             $(this).text('재생');
         }
-    });
+    });//visual stop
 
-
+    /* fabric 이미지 스크롤 효과 */
     let scrolling;
-    fabScroll();
-    $(window).scroll(function(){
-       fabScroll();
+    let moveTop;
+    let objName = $('.fabric .bg img');
+    fabScroll(); //로딩됐을때 한번
+    $(window).scroll(function(){ //스크롤 할때마다 실행
+        fabScroll();
     });
 
-    function fabScroll(){
+    function fabScroll(){ // 스크롤 값을 계산해서 fabric의 이미지를 움직일 함수
+        /* 스크롤값을 요소의 위치값으로 변경해서 스타일을 적용
+          효과를 줄 요소가 화면의 하단에 등장하기 시작했을때부터 
+          스크롤 한값을 새로 계산해서 해당 요소에 줘야 해당 요소가 화면 어디에 배치되어 있든
+          자연스럽게 패럴랙스 효과를 줄 수 있음
+        */
         scrolling = $(window).scrollTop();
-        console.log(scrolling);
+        console.log(scrolling, 'scroll');
+        console.log(objName.offset().top, 'top');
         moveTop = scrolling*0.15;
-        $('.fabric .bg img').css('transform','translate(0, -'+moveTop+'px)');
+        // objName.css('transform','translate(0, -'+moveTop+'px)');
     }
+
+
+
+    /*
+        이미지가 스크롤될때 오브젝트가 움직이는 효과
+        움직이는 싲가을 오브젝트가 화면에 나타나기 시작했을때부터 스크롤된 값을 계산해서
+        움직일 값으로 변환해줘야 함.
+        1. 스크롤되는 값 - $(window).scrollTop();
+        2. 오브젝트가 화면 하단에서 나타나기 시작하는 값  
+        3. 오브젝트를 어떻게 움직일 방법    
+    */
+
+     let winH;
+     let offTop;
+     let moveVal;
+     let scroll;
+     
+     objParallax($('.fabric .bg2'), $('.fabric .bg'),'top', 0.1);
+    //  objParallax($('.sns p'), $('.sns p'),'left', 0.2);
+
+   
+
+     function objParallax(objMove, objParent, moveDir, moveRate){
+        objMove.css('transition','1s')
+        moveAni(objMove, objParent, moveDir, moveRate);
+        $(window).scroll(function(){
+            moveAni(objMove, objParent, moveDir, moveRate);
+         });    
+         $(window).resize(function(){
+            moveAni(objMove, objParent, moveDir, moveRate);
+         });
+     }
+     function moveAni(objMove, objParent, moveDir, moveRate){
+        winH = $(window).height();
+        offTop = objParent.offset().top;
+        scrolling = $(window).scrollTop();
+        moveVal = (offTop - offTop + winH) *moveRate;
+        // console.log(winH, 'window.height');
+        // console.log(offTop, 'offTop');
+        // console.log(scrolling, 'scrolling');
+        console.log(moveVal, 'moveVal');
+        
+        if(moveDir == 'left'){
+            objMove.css('transform', 'translateX(-'+moveVal+'px)')
+        }else{
+            objMove.css('transform', 'translateY(-'+moveVal+'px)')
+        }
+     }
 });
