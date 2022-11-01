@@ -1,0 +1,12 @@
+@import url(_var.scss);
+@import url(_default.scss);
+@import url(_common.scss);
+
+
+.container {
+    svg {
+        path {
+            fill: #9d856d;
+        }
+    }
+}

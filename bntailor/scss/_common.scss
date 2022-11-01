@@ -1,8 +1,8 @@
 /* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap'); /* 본명조 */
 html, body {
-    color: #3D3D3D;
+    color: $basic_color;
     line-height: 1.5;
     font-family: 'Noto Sans KR', 'NanumGothic', 'Malgun Gothic', 'Apple SD Gothic', 'Apple SD Gothic Neo', 'Dotum', sans-serif;
     font-size: 16px;
@@ -73,9 +73,9 @@ html, body {
 
 /* 브라우저에서 글자를 드래그했을대 드래그한 영역의 색과 글자색
   -moz- -webkit- 이 앞에 붙은 속성은 표준화 되지 않은 속성  */
-::selection{background:#cba585;color:#3e3e3f;}
-::-moz-selection{background:#cba585;color:#3e3e3f;}
-::-webkit-selection{background:#cba585;color:#3e3e3f;} 
+::selection{background:#CBA585;color:#3E3E3F;}
+::-moz-selection{background:#CBA585;color:#3E3E3F;}
+::-webkit-selection{background:#CBA585;color:#3E3E3F;} 
 
 .header {
     position: absolute;
@@ -86,7 +86,7 @@ html, body {
     height: 100px;
     .logo {
         float: left;
-        margin: 40px 0 0 40px;
+        margin: 30px 0 0 40px;
     }
     .gnb {
         float: right;
@@ -94,26 +94,45 @@ html, body {
         .gnb_open {
             display: none;
         }
-        ul {
-            li {
-                float: left;
-                a {
-                    display: block;
-                    padding: 0 24px;
-                    color: $w_tit_color;
-                    font-size: 22px;
-                    line-height: 100px;
+        .gnb_wrap {
+            ul {
+                li {
+                    float: left;
+                    a {
+                        display: block;
+                        padding: 0 24px;
+                        color: $w_tit_color;
+                        font-size: 22px;
+                        line-height: 100px; /* header의 높이 */
+                    }
                 }
             }
         }
     }
 }
+@media screen and (max-width:1440px){
+    .header .logo a img {
+        width: 130px;
+    }
+    .header .gnb .gnb_wrap ul li a {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1440px){
+    .header .logo a img {
+        width: 120px;
+    }
+    .header .gnb .gnb_wrap ul li a {
+        padding: 0 15px;
+        font-size: 17px;
+    }
+}
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width:1000px){
     .header {
         height: 60px;
         .logo {
-            margin: 25px 0 0 20px;
+            margin: 16px 0 0 20px;
             a img {
                 width: 108px;
             }
@@ -132,36 +151,168 @@ html, body {
                     position: absolute;
                     right: 20px;
                     width: 21px;
+                    z-index: 1;
                     height: 2px;
-                    background-color: #fff;
-                    &.line1 {
+                    background-color: #FFF;
+                    transition: 0.3s;
+                    &.line1 {   /*  span.line1  */
                         top: 25px;
                     }
                     &.line2 {
                         top: 32px;
+                        width: 16px;
                     }
                     &.line3 {
                         top: 39px;
                     }
                 }
             }
-            ul {
+            &::after {
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,0.5);
+                content: "";
+            }
+            .gnb_wrap {
                 display: none;
+                position: fixed;
+                right: 0;
+                top: 0;
+                width: 100%;
+                max-width: 375px;
+                height: 100vh;
+                background-color: #FFF;
+                color: #3d3d3d;
+                ul {
+                    margin: 60px 0 0 0; 
+                    li {
+                        float: none;
+                        border-bottom:1px solid #f4f4f4 ;
+                        a {
+                            @include font_serif;
+                            padding: 0;
+                            color: $basic_color;
+                            font-size: 22px;
+                            line-height: 55px; /* header의 높이 */
+                            text-align: center;
+                        }
+                    }
+                }
             }
         }
     }
 }
-@media screen and (max-width: 1000px) {
-    .header {
-        height: 60px;
-        .logo {
-            margin: 16px 0 0 20px;
-            a img {
-                width: 108px;
+
+.footer {
+    @include clearfix;
+    padding: 65px 0;
+    background-color: #33302D;
+    color: $w_basic_color;
+    .sns {
+        float: right;
+        ul {
+            li {
+                float: left;
+                a {
+                    display: block;
+                    position: relative;
+                    width: 49px;
+                    height: 49px;
+                    border-width: 1px 1px 1px 0;
+                    border-style: solid;
+                    border-color: rgba(255,255,255,0.1);
+                    font-size: 0;
+                    line-height: 0;
+                    &::before {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 30px;
+                        height: 30px;
+                        background-image: url(/image09/bntailor/image/common/footer_ico.svg);
+                        background-repeat: no-repeat;
+                        content: "";
+                    }
+                }
+                &:first-child {
+                    a {
+                        border-left-width: 1px;
+                    }
+                }
+                &.facebook a::before {
+                    background-position: left top;
+                }
+                &.instagram a::before {
+                    background-position: left -30px top;
+                }
+                &.naver a::before {
+                    background-position: left -60px top;
+                }
             }
         }
-        .gnb {
-            margin: 0;
+    }
+    .inner {
+        float: left;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .footer {
+    @include clearfix;
+    padding: 65px 0;
+    background-color: #33302D;
+    color: $w_basic_color;
+    .sns {
+        display: flex;
+        ul {
+            li {
+                background-position: top;
+                a {
+                    display: block;
+                    position: relative;
+                    width: 49px;
+                    height: 49px;
+                    border-width: 1px 1px 1px 0;
+                    border-style: solid;
+                    border-color: rgba(255,255,255,0.1);
+                    font-size: 0;
+                    line-height: 0;
+                    &::before {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 30px;
+                        height: 30px;
+                        background-image: url(/image09/bntailor/image/common/footer_ico.svg);
+                        background-repeat: no-repeat;
+                        content: "";
+                    }
+                }
+                &:first-child {
+                    a {
+                        border-left-width: 1px;
+                    }
+                }
+                &.facebook a::before {
+                    background-position: left top;
+                }
+                &.instagram a::before {
+                    background-position: left -30px top;
+                }
+                &.naver a::before {
+                    background-position: left -60px top;
+                }
+            }
         }
     }
+    .inner {
+        float: left;
+    }
+}
+
 }
