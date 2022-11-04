@@ -3,10 +3,36 @@
 @import url(_common.scss);
 
 
-.container {
-    svg {
-        path {
-            fill: #9d856d;
+.sub_visual {
+    height: 660px;
+    background-image: url(/image09/bntailor/image/sub/sub_visual1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .location {
+        padding: 340px 0 0 0;
+        color: $basic_color;
+    }
+    .tit {
+        @include font_serif;
+        color: #fff;
+        font-size: 60px;
+        font-weight: 700;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .lnb {
+        height: 40px;
+        .lnb_wrap {
+            ul {
+                li {
+                    a {
+                        padding: 0 15px;
+                        font-size: 15px;
+                    }
+                }
+            }
         }
     }
 }
