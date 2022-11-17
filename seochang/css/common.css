@@ -1,5 +1,6 @@
 /* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 html, body {
     color: #3D3D3D;
     line-height: 1.5;
@@ -68,4 +69,6 @@ html, body {
 .skip_nav a:focus {
     top: 0;
 }
+
+
 
