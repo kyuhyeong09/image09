@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/94a48106d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/sub.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/sub.js"></script>
+    <title>CEO 인사말 | 회사소개 | 서창산업</title>
+</head>
+<body>
+    <div class="skip_nav">
+        <!--
+            스킵네비게이션 - tab로 홈페이지에 접근했을때 나타나는 바로가기 링크
+            반드시 내부로 이동해야함
+            <a href="#contents"></a> 클릭하는 경우 <div id="contents"> 로 이동
+        -->
+        <a href="#contents">본문내용 바로가기</a> <!-- 내부링크 id="contents"로 이동 -->
+        <a href="#gnb">메인메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+        <header class="">
+            <div class="wrapper">
+                <h1 class="logo"><a href="../index.html">서창산업 로고</a></h1>
+                <div class="lang">
+                    <a class="han">KR</a><a class="am">EN</a>
+                </div>
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="contents/notice.html"><span>회사소개</span></a>
+                            <ul>
+                                <li><a href="contents/introduce.html">CEO 인사말</a></li>
+                                <li><a href="contents/company.html">회사비전</a></li>
+                                <li><a href="contents/history.html">연혁</a></li>
+                                <li><a href="contents/group.html">조직도</a></li>
+                                <li><a href="contents/contact.html">오시는 길</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/work01.html"><span>사업분야</span></a>
+                            <ul>
+                                <li><a href="contents/work01.html">사업분야</a></li>
+                                <li><a href="contents/work02.html">기술분야</a></li>
+                                <li><a href="contents/work03.html">시설현황</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/product01.html">제품소개</a>
+                            <ul>
+                                <li><a href="contents/product01.html">이로운죽</a></li>
+                                <li><a href="contents/product02.html">크리밀</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/report01.html">About US</a>
+                            <ul>
+                                <li><a href="contents/report01.html">보도자료</a></li>
+                                <li><a href="contents/report02.html">특허 및 인증</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contents/service01.html">고객센터</a>
+                            <ul>
+                                <li><a href="contents/service01.html">공지사항</a></li>
+                                <li><a href="contents/service02.html">고객의 소리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="sub_visual sub_bg1">
+            <div class="wrapper">
+                <strong>회사소개</strong> <!-- 1차메뉴명 -->
+            </div>
+        </div>
+        <nav class="lnb"><!-- local navigation bar 서브메뉴 -->
+            <div class="wrapper">
+                <div class="menu">
+                    <a href="../index.html" title="메인페이지 바로가기" class="home"><i class="fa-solid fa-house"></i></a>
+                    <div class="depth">
+                        <!-- 하나의 버튼이 여는 기능과 닫는 기능을 모두 수행
+                             이때는 반드시 button에 title로 현재의 기능을 입력해야함
+                             depth에 open 클래스가 들어가있으면 열린상태 -->
+                        <button title="메뉴 열기" class="btn"><span>회사소개</span><i class="fa-solid fa-angle-down"></i></button>
+                        <!-- <a href="#n" title="1차메뉴 열기" class="btn"><span>소개의장</span><i class="fa-solid fa-angle-down"></i></a> -->
+                        <ul>
+                            <li class="now"><a href="contents/notice.html">회사소개</a></li>
+                            <li><a href="contents/work01.html">사업분야</a></li>
+                            <li><a href="contents/product01.html">제품소개</a></li>
+                            <li><a href="contents/report01.html">About US</a></li>
+                            <li><a href="contents/service01.html">고객센터</a></li>
+                        </ul>
+                    </div>
+                    <div class="depth">
+                        <button title="메뉴 열기" class="btn"><span>CEO 인사말</span><i class="fa-solid fa-angle-down"></i></button>
+                        <ul>
+                            <li class="now"><a href="contents/introduce.html">CEO 인사말</a></li>
+                            <li><a href="contents/company.html">회사비전</a></li>
+                            <li><a href="contents/history.html">연혁</a></li>
+                            <li><a href="contents/group.html">조직도</a></li>
+                            <li><a href="contents/contact.html">오시는 길</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 기능을 가지고 있는 태그 즉 a/button 태그는 어떤 태그를 사용하더라도 
+                     동일하게 구현되도록 css 스타일을 주는 것이 좋음  -->
+                <button class="print" title="콘텐츠 인쇄"><i class="fa-solid fa-print"></i></button>
+                <!-- <a href="#n" class="print" title="콘텐츠 인쇄"><i class="fa-solid fa-print"></i></a> -->
+            </div>
+        </nav> 
+        <div class="container">
+            <div class="sub_tit">
+                <div class="wrapper">
+                    <h2>인사말</h2>
+                </div>
+            </div>
+            <div class="contents" id="contents">
+                <div class="cnt_greeting"> 
+                    <!-- 콘텐츠 페이지별로 콘텐츠 영역을 특정한 클래스 명을 줌
+                         cnt_html파일명, 절대 콘텐츠 별로 클래스명이 중복되지 않게 하기 위해서 -->
+                    <div class="wrapper">
+                        <p class="tit">2012년 2월, (재)해상왕장보고기념사업회와 (재)해양문화재단이 통합하여 출범하였습니다. <br>
+                            해양분야를 대표하는 공익법인으로써 <strong>해양대국 실현</strong>에 이바지하기 위해 각고의 노력을 다하고 있습니다.</p>
+                    </div>
+                    <div class="bg"></div>
+                    <div class="wrapper">
+                        <div class="txt_wrap clearfix">
+                            <div class="colgroup1">
+                                <p>한국해양재단 홈페이지를 방문해 주신 국민(네티즌) 여러분, 그리고 해양관련 종사자분들을 진심으로 환영합니다. <br><br>
+                                    우리 재단은 2012년 2월, (재)해상왕장보고기념사업회와 (재)해양문화재단이 통합하여 출범하였습니다. 이후 해양분야를 대표하는 공익법인으로써 해양대국 실현에 이바지하기 위해 각고의 노력을 다하고 있습니다.<br><br>                                    
+                                    삼면이 바다인 대한민국은 해양과는 공동운명체입니다. 우리의 선조들은 이를 일찍이 선각하여 해양으로의 도전을 게을리 하지 않았습니다. 1200년전 신라의 장보고대사는 청해진을 설치해 해적을 소탕하고 동북아 해상의 패권을 장악했습니다.  또한 해상네트워크를 구축해 청해진을 종합무역항으로 발전시켜 막대한 부를 축적하였습니다. 바다에 과감히 도전한 결과 국가의 안보를 지키고 경제를 발전시킬 수 있었던 것입니다.<br><br>                                    
+                                    오늘날의 우리는 이러한 해양정신을 배워야 할 것입니다. 부족한 자원과 좁은 땅이라는 불리한 조건으로 우리나라가 지속적으로 발전, 성장할 수 있는 방법 역시 해양에 있기 때문입니다. 우리의 바다에는 풍부한 어족자원과 아직 밝혀지지 않은 무한한 광물자원이 존재합니다.</p>
+                            </div>
+                            <div class="colgroup2">
+                                <p>또한 한반도 1만 5천km에 육박하는 해안선과 3,200여개의 섬은 그 자체로 천혜의 관광자원이라고 할 수 있습니다. 우리는 이런 해양자원을 활용해 해양강국으로 도약해 나가야 할 것입니다.<br><br>
+                                    이를 위해서는 해양에 대한 국민적 관심과 사랑이 무엇보다도 중요합니다. 이에 우리 재단에서는 국민들의 해양의식 고취를 위해 다양한 문화 사업을 진행하고 있으며, 해양 전문가 육성을 위한 교육 및 지원사업과 해양관광 활성화 사업 또한 펼치고 있습니다. <br><br>                                    
+                                    글로벌 헤게모니를 장악하기 위한 해양에서의 강대국들의 각축은 어제 오늘의 일이 아닙니다. 이러한 상황 속에서 대한민국이 세계 5대 해양강국으로 도약하는데 재단이 앞장서겠습니다. <br><br>                                    
+                                    해양대국 대한민국을 위한 여러분들의 성원과 조언을 귀담아 듣겠습니다. <br><br>                                    
+                                    감사합니다. </p>
+                                <p class="sign">한국해양재단 이사장 문해남</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="inner">
+                    <div class="family">
+                        <button class="open">
+                            <span>Family Site</span>
+                            <i class="material-symbols-rounded">arrow_forward</i>
+                        </button>
+                        <ul>
+                            <li><a href="http://guriscway.co.kr/" target="_blank" title="새창">구리휴게소(일산방향)</a></li>
+                            <li><a href="http://icheonscway.co.kr/" target="_blank" title="새창">이천휴게소(남이방향)</a></li>
+                            <li><a href="http://icgoscway.co.kr/" target="_blank" title="새창">이천주유충전소(남이방향)</a></li>
+                            <li><a href="http://okgyescway.co.kr/" target="_blank" title="새창">옥계휴게소(속초방향)</a></li>
+                            <li><a href="http://okgoscway.co.kr/" target="_blank" title="새창">옥계주유충전소(속초방향)</a></li>
+                            <li><a href="http://jjgoscway.co.kr/" target="_blank" title="새창">죽전주유소(서울방향)</a></li>
+                            <li><a href="http://yiigoscway.co.kr/" target="_blank" title="새창">용인주유충전소(인천방향)</a></li>
+                            <li><a href="http://yiggoscway.co.kr/" target="_blank" title="새창">용인주유충전소(강릉방향)</a></li>
+                            <li><a href="http://seocheonscway.co.kr/" target="_blank" title="새창">서천휴게소(서울방향)</a></li>
+                            <li><a href="http://scgoscway.co.kr/" target="_blank" title="새창">서천주유충전소(서울방향)</a></li>
+                        </ul>
+                        <button class="close">
+                            <span>Family Site</span>
+                            <i class="material-symbols-rounded">close</i>
+                        </button>
+                    </div>
+                    <ul class="fnav clearfix">
+                        <li><a href="#n"><img src="../images/common/logo.svg" alt="서창산업로고"></a></li>
+                        <li class="privacy"><a href="#n">개인정보처리방침</a></li></br>
+                    </ul>
+                    <ul class="fnab clearfix">
+                        <li><a href="#n">서창산업(주) </a></li>
+                        <li><a href="#n"> 세종시 전의면 의당전의로 807 (신흥리 96-1) </a></li>
+                        <li><a href="#n">대표이사 최윤묵</a></li></br>
+                    </ul>
+                    <ul class="fnan clearfix">
+                        <li><a href="#n">사업자등록번호 307-81-02494 </a></li>
+                        <li><a href="#n">TEL 044-865-0556 </a></li>
+                        <li><a href="#n"> FAX 044-865-0560(토, 일요일, 공휴일 휴무)</a></li>
+                    </ul>   
+                    <div class="copyright">SEO CHANG INDUSTRIAL All Copy Reserved © 2022</div>
+                </div>
+            </div>
+        </footer>   
+    </div>    
+</body>
+</html>
+        
+            

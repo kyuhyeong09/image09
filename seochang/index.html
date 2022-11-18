@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/94a48106d1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="js/jquery-3.6.0.min.js"></script>
@@ -13,6 +13,15 @@
     <title>서창산업</title>
 </head>
 <body>
+    <div class="skip_nav">
+        <!--
+            스킵네비게이션 - tab로 홈페이지에 접근했을때 나타나는 바로가기 링크
+            반드시 내부로 이동해야함
+            <a href="#contents"></a> 클릭하는 경우 <div id="contents"> 로 이동
+        -->
+        <a href="#contents">본문내용 바로가기</a> <!-- 내부링크 id="contents"로 이동 -->
+        <a href="#gnb">메인메뉴 바로가기</a>
+    </div>
     <div id="wrap">
         <header class="">
             <div class="wrapper">
@@ -70,7 +79,7 @@
                 <h2>서창산업(주)</h2>
                 <p>고객이 언제나 신뢰할 수 있는 회사</br>
                     건강한 삶과 행복 증진을 함께하는 회사</p>
-                <a href="#n">더알아보기</a>    
+                <a href="https://www.youtube.com/watch?v=ii3NsaLR8xc" target="_blank" title="새창">더알아보기</a>    
             </div>
         </section>
         <section class="biz clearfix">
@@ -148,7 +157,7 @@
                                 위해 물성, 형태, 성분 등을 조정하여 제조 가공한</br>
                                 식품을 말하며, <b>고령자의 사용성을 높인 제품</b>을</br>
                                 <b>고령친화(우수)식품</b>이라고 합니다.</p>
-                            <a href="https://smartstore.naver.com/scbiotec/products/5301451375?NaPm=ct%3Dlaktq4rs%7Cci%3D6a77f44d773bf578f4eef13ca2005a57dd8e5c3e%7Ctr%3Dsls%7Csn%3D2582638%7Chk%3D3030573a204cc407cb93a53337d325da9005ecf7">VIEW MORE</a>
+                            <a href="https://smartstore.naver.com/scbiotec/products/5301451375?NaPm=ct%3Dlaktq4rs%7Cci%3D6a77f44d773bf578f4eef13ca2005a57dd8e5c3e%7Ctr%3Dsls%7Csn%3D2582638%7Chk%3D3030573a204cc407cb93a53337d325da9005ecf7" target="_blank" title="새창">VIEW MORE</a>
                         </li>
                     </ul>           
                 </div>    
@@ -208,6 +217,7 @@
                         </button>
                     </div>
                     <ul class="fnav clearfix">
+                        <li><a href="#n"><img src="images/common/logo.svg" alt="서창산업로고"></a></li>
                         <li class="privacy"><a href="#n">개인정보처리방침</a></li></br>
                     </ul>
                     <ul class="fnab clearfix">

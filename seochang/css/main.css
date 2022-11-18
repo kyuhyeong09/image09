@@ -363,7 +363,7 @@ footer .inner {
 footer .family {
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 25px;
     z-index: 100;
 }
 footer .family button {
@@ -418,7 +418,7 @@ footer .family ul li a:hover {
     color: #FFF;
 }
 footer .fnav {
-    padding: 16px 0 0 0;
+    padding: 30px 0 0 0;
 }
 footer .fnav li {
     position: relative;
@@ -426,7 +426,7 @@ footer .fnav li {
     margin: 0 30px 0 0;
 }
 footer .fnab {
-    padding: 16px 0 0 0;
+    padding: 16px 0 0 212px;
 }
 footer .fnab li {
     position: relative;
@@ -434,7 +434,7 @@ footer .fnab li {
     margin: 0 30px 0 0;
 }
 footer .fnan {
-    padding: 16px 0 0 0;
+    padding: 16px 0 0 212px;
 }
 footer .fnan li {
     position: relative;
@@ -448,7 +448,7 @@ footer .fnav li::after {
     width: 1px;
     height: 12px;
     background-color: rgba(255,255,255,0.3);
-    content: "";
+    /* content: ""; */
 }
 footer .fnav li:first-child::after {
     display: none;
@@ -461,6 +461,6 @@ footer .fnav li.privacy {
 }
 
 footer .copyright {
-    padding: 0 0 20px 0;
+    padding: 0 0 20px 212px;
     color: rgba(255,255,255,0.6);
 }
