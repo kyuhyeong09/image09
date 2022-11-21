@@ -70,5 +70,205 @@ html, body {
     top: 0;
 }
 
+header {
+    position: absolute; /*body를 기준으로 정렬*/
+    left: 0;
+    top: 0;
+    z-index: 300;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.6);
+}
+header h1 {
+    float: left;
+    margin: 36px 60px 0 0;
+}
+header h1 a {
+    display: block;
+    width: 182px;
+    height: 30px;
+    background-image: url(../images/common/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    font-size: 0;
+    line-height: 0;
+}
+header .lang {
+    float: left;
+    margin: 40px 0 0 0;
+    padding: 6px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    border: 1px solid #fff;
+    border-radius: 14px;
+}
+header .lang .am {
+    margin: 0 0 0 19px;
+    color: rgba(255,255,255,0.6);
+}
+header .gnb {
+    float: right;
+}
+header .gnb > ul {
+    margin: 2px 228px 0 0;
+}
+header .gnb > ul > li {
+    float: left;
+    width: 130px;
+    text-align: center;
+    line-height: 30px;
+}
+header .gnb > ul > li > a {
+    display: block;
+    font-size: 20px;
+    line-height: 100px;
+}
+header .gnb > ul > li:last-child > a {
+    padding-right: 0;
+}
+header .gnb > ul > li > ul {
+    display: none;
+}
+header.menu_open {
+    color: #3d3d3d;
+}
+header.menu_open .lang {
+    border: 1px solid #3d3d3d;
+}
+header.menu_open .lang a {
+    color: #3d3d3d;
+}
+header.menu_open h1 a {
+    background-image: url(../images/common/logo_bl.svg);
+}
+header.menu_open::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.9);
+    content: "";
+}
+header.menu_open .wrapper {
+    position: relative;
+    z-index: 2;
+}
+header.menu_open .gnb > ul > li > ul {
+    display: block;
+}
 
+footer {
+    background-color: #2D2D2D;
+    color: rgba(255,255,255,0.8);
+}
+footer .inner {
+    position: relative;
+}
+footer .family {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    z-index: 100;
+}
+footer .family button {
+    width: 200px;
+    height: 37px;
+    padding: 0 5px 0 10px;
+    border: 1px solid rgba(255,255,255,0.6);
+}
+footer .family button span {
+    float: left;
+}
+footer .family button i {
+    float: right;
+    margin: 3px 0 0 0;
+    font-size: 18px;
+}
+footer .family button.close {
+    display: none;
+}
+footer .family ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 37px;
+    width: 100%;
+    box-shadow: -3px -3px 10px rgba(0,0,0,0.05);
+}
+footer .family.fa_open ul {
+    display: block;
+}
+footer .family.fa_open button.close {
+    display: block;
+}
+footer .family.fa_open button.open {
+    display: none;
+}
+footer .family ul li {
+    border-bottom: 1px solid #CCC;
+}
+footer .family ul li:last-child {
+    border-bottom: 0;
+}
+footer .family ul li a {
+    display: block;
+    padding: 0 0 0 10px;
+    line-height: 45px;
+    background-color: #FFF;
+    color: #3D3D3D;
+}
+footer .family ul li a:hover {
+    background-color: #1255A5;
+    color: #FFF;
+}
+footer .fnav {
+    padding: 30px 0 0 0;
+}
+footer .fnav li {
+    position: relative;
+    float: left;
+    margin: 0 30px 0 0;
+}
+footer .fnab {
+    padding: 16px 0 0 212px;
+}
+footer .fnab li {
+    position: relative;
+    float: left;
+    margin: 0 30px 0 0;
+}
+footer .fnan {
+    padding: 16px 0 0 212px;
+}
+footer .fnan li {
+    position: relative;
+    float: left;
+    margin: 0 30px 30px 0;
+}
+footer .fnav li::after {
+    position: absolute;
+    right: -17px;
+    top: 5px;
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.3);
+    /* content: ""; */
+}
+footer .fnav li:first-child::after {
+    display: none;
+}
+footer .fnav li:last-child::after {
+    display: none;
+}
+footer .fnav li.privacy {
+    font-weight: 700;
+}
 
+footer .copyright {
+    padding: 0 0 20px 212px;
+    color: rgba(255,255,255,0.6);
+}

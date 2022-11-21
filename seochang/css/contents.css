@@ -1,0 +1,5 @@
+.cts_introduce .bg {
+    float: left;
+    width: 680px; /* 콘텐츠영역의 넓이 1400px의 절반 700px */
+    height: 534px;
+}
