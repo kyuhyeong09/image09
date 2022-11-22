@@ -1,6 +1,6 @@
 /* 모든 페이지에 공통 들어가는 스타일 (header/footer) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
 html, body {
     color: #3D3D3D;
     line-height: 1.5;
@@ -13,12 +13,11 @@ html, body {
 #wrap { /* id="wrap" */
     overflow: hidden;
     position: relative;
-    min-width: 320px;
+    min-width: 1440px;
 }
 /* 콘텐츠의 넓이를 제한하고 홈페이지를 브라우저 가운데 배치 */
 .wrapper {
-    width: 100%;
-    max-width: 1440px;
+    width: 1440px;
     padding: 0 20px;
     margin: 0 auto;
     /* 1400px 이하부터 320px까지 모든 사이즈 반응형 
@@ -29,12 +28,13 @@ html, body {
        1400px이 콘텐츠 영역인데 왼쪽 20 + 오른쪽 20 = 1440px이 넓이
        padding으로 좌우에 여백을 20px씩 줌  */
 }
-@media screen and (max-width:1000px){
-    html, body {
-        font-size: 14px;
-    }
-}
 @media screen and (max-width:640px){
+    #wrap {
+        min-width: 350px;
+    }
+    .wrapper {
+        width: auto;
+    }
     html, body {
         font-size: 13px;
     }
@@ -111,37 +111,52 @@ header .lang .am {
 header .gnb {
     float: right;
 }
-header .gnb > ul {
-    margin: 2px 228px 0 0;
+header .gnb .gnb_open {
+    display: none;
 }
-header .gnb > ul > li {
+header .gnb .gnb_close {
+    display: none;
+}
+
+header .gnb .gnb_wrap > ul > li {
+    position: relative;
     float: left;
     width: 130px;
     text-align: center;
     line-height: 30px;
 }
-header .gnb > ul > li > a {
+header .gnb .gnb_wrap > ul > li > a {
     display: block;
     font-size: 20px;
     line-height: 100px;
 }
-header .gnb > ul > li:last-child > a {
+header .gnb .gnb_wrap > ul > li:last-child > a {
     padding-right: 0;
 }
-header .gnb > ul > li > ul {
+header .gnb .gnb_wrap > ul > li > ul {
     display: none;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    padding-top: 10px;
+}
+header .gnb .gnb_wrap > ul > li > ul > li > a {
+    display: block;
+    font-size: 17px;
+    line-height: 35px;
 }
 header.menu_open {
-    color: #3d3d3d;
+    color: #fff;
 }
 header.menu_open .lang {
-    border: 1px solid #3d3d3d;
+    border: 1px solid #fff;
 }
 header.menu_open .lang a {
-    color: #3d3d3d;
+    color: #fff;
 }
 header.menu_open h1 a {
-    background-image: url(../images/common/logo_bl.svg);
+    background-image: url(../images/common/logo.svg);
 }
 header.menu_open::before {
     position: absolute;
@@ -150,24 +165,146 @@ header.menu_open::before {
     width: 100%;
     height: 300px;
     z-index: 1;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(0,0,0,0.6);
     content: "";
 }
 header.menu_open .wrapper {
     position: relative;
     z-index: 2;
 }
-header.menu_open .gnb > ul > li > ul {
+header.menu_open .gnb .gnb_wrap > ul > li > ul {
     display: block;
+}
+header.fixed {
+    position: fixed;
+}
+header.fixed::before { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.6);
+    content: "";
+}
+header.fixed.menu_open::before {
+    height: 300px;
+}
+@media screen and (max-width:640px) {
+    header {
+        height: 60px;
+    }
+    header h1 {
+        margin: 21px 0 0 0;
+    }
+    header h1 a {
+        width: 112px;
+        height: 20px;
+    }
+    header .lang {
+        display: none;
+    }
+   
+    header .gnb .gnb_open {
+        display: block;
+        padding: 23px 0 0 0;
+    }
+    header .gnb .gnb_open span {
+        display: none;
+    }
+    header .gnb .gnb_open i {
+        font-size: 15px;
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+    header .gnb .gnb_wrap ul {
+        display: block;
+        padding: 68px 0 0 0;
+    }
+    
+    header .gnb .gnb_wrap > ul > li {
+        position: relative;
+        float: left;
+        width: 130px;
+        text-align: center;
+        line-height: 30px;
+    }
+    header .gnb .gnb_wrap > ul > li > a {
+        display: block;
+        font-size: 20px;
+        line-height: 100px;
+    }
+    header .gnb .gnb_wrap > ul > li:last-child > a {
+        padding-right: 0;
+    }
+    header .gnb .gnb_wrap > ul > li > ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        padding-top: 10px;
+    }
+    header .gnb .gnb_wrap > ul > li > ul > li > a {
+        display: block;
+        font-size: 17px;
+        line-height: 35px;
+    }
+    header.menu_open {
+        color: #fff;
+    }
+    header.menu_open .lang {
+        border: 1px solid #fff;
+    }
+    header.menu_open .lang a {
+        color: #fff;
+    }
+    header.menu_open h1 a {
+        background-image: url(../images/common/logo.svg);
+    }
+    header.menu_open::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 300px;
+        z-index: 1;
+        background-color: rgba(0,0,0,0.6);
+        content: "";
+    }
+    header.menu_open .wrapper {
+        position: relative;
+        z-index: 2;
+    }
+    header.menu_open .gnb .gnb_wrap > ul > li > ul {
+        display: block;
+    }
+    header.fixed {
+        position: fixed;
+    }
+    header.fixed::before { 
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(0,0,0,0.6);
+        content: "";
+    }
+    header.fixed.menu_open::before {
+        height: 300px;
+    }
 }
 
 footer {
     background-color: #2D2D2D;
     color: rgba(255,255,255,0.8);
+    padding: 40px 0 50px 0;
 }
-footer .inner {
-    position: relative;
-}
+
 footer .family {
     position: absolute;
     right: 0;
@@ -225,50 +362,21 @@ footer .family ul li a:hover {
     background-color: #1255A5;
     color: #FFF;
 }
+footer .flogo {
+    float: left;
+}
+footer .inner {
+    float: left;
+    margin-left: 40px;
+}
 footer .fnav {
-    padding: 30px 0 0 0;
+    margin-bottom: 20px;
 }
-footer .fnav li {
-    position: relative;
-    float: left;
-    margin: 0 30px 0 0;
+footer .finfo span {
+    display: inline-block;
+    margin-right: 10px;
 }
-footer .fnab {
-    padding: 16px 0 0 212px;
-}
-footer .fnab li {
-    position: relative;
-    float: left;
-    margin: 0 30px 0 0;
-}
-footer .fnan {
-    padding: 16px 0 0 212px;
-}
-footer .fnan li {
-    position: relative;
-    float: left;
-    margin: 0 30px 30px 0;
-}
-footer .fnav li::after {
-    position: absolute;
-    right: -17px;
-    top: 5px;
-    width: 1px;
-    height: 12px;
-    background-color: rgba(255,255,255,0.3);
-    /* content: ""; */
-}
-footer .fnav li:first-child::after {
-    display: none;
-}
-footer .fnav li:last-child::after {
-    display: none;
-}
-footer .fnav li.privacy {
-    font-weight: 700;
-}
-
 footer .copyright {
-    padding: 0 0 20px 212px;
+    margin: 20px 0 0 0;
     color: rgba(255,255,255,0.6);
 }

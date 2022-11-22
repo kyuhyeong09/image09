@@ -1,5 +1,31 @@
+.cts_introduce {
+    margin: 125px 0 221px 0;
+}
 .cts_introduce .bg {
     float: left;
-    width: 680px; /* 콘텐츠영역의 넓이 1400px의 절반 700px */
-    height: 534px;
+    width: 680px;
+}
+.cts_introduce .bg img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cts_introduce .txt_wrap {
+    float: right;
+    width: 600px;
+    margin-right: 80px;
+}
+.cts_introduce .txt_wrap .tit {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+.cts_introduce .txt_wrap  p {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 38px 0 28px 0;
+}
+.cts_introduce .txt_wrap .sign {
+    text-align: right;
 }

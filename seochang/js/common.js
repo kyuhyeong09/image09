@@ -35,10 +35,10 @@ $(document).ready(function(){
             mouseenter 이벤트가 발생할때마다 실행됨
         --> pc일때만 on을 주려고 하면 안된다.
 
-        메뉴 : .header .gnb > ul > li
+        메뉴 : .header .gnb .gnb_wrap > ul > li
     */
     
-    $('.header .gnb > ul > li').on('mouseenter focusin', function(){
+    $('.header .gnb .gnb_wrap > ul > li').on('mouseenter focusin', function(){
         if(pcMobile == 'pc'){ //pc일때만 실행 (같다는 의미는 == )
             $('.header').addClass('menu_open');
         }// if문 
@@ -48,7 +48,7 @@ $(document).ready(function(){
         $('.header').removeClass('menu_open');
     });
 
-    $('.header .gnb > ul > li:last-child > ul > li:last-child > a').on('focusout', function(){
+    $('.header .gnb .gnb_wrap > ul > li:last-child > ul > li:last-child > a').on('focusout', function(){
         $('.header').removeClass('menu_open');
     });
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
     });
 
     /*
-        1차메뉴 li를 클릭했을때 ( .header .gnb > ul > li )
+        1차메뉴 li를 클릭했을때 ( .header .gnb .gnb_wrap > ul > li )
         클릭한 li에만 sub_open 클래스 추가 (메뉴열기)
         --> 만약에 현재 열려있는 상태면 닫기 (sub_open 삭제)
                    현재 닫혀있는 상태라면 열기 (sub_open 추가)
@@ -74,7 +74,7 @@ $(document).ready(function(){
         --> pc에서는 1차메뉴를 클릭하면 첫번째 하위메뉴로 이동 (href값으로 이동)
             그러나 모바일에서는 하위메뉴 페이지로 이동 하면 안됨, 하위 메뉴를 열어야함.
     */
-    $('.header .gnb > ul > li').on('click', function(e){
+    $('.header .gnb .gnb_wrap > ul > li').on('click', function(e){
         if(pcMobile == 'mobile'){ //모바일에서만 실행
             e.preventDefault();
             $(this).toggleClass('sub_open');

@@ -9,24 +9,42 @@
     text-align: right;
 }
 .visual h2 {
-    margin-right: 228px;
     padding: 188px 0 18px 0;
     font-size: 50px;
     font-weight: 700;
 }
 .visual p {
-    margin-right: 228px;
     padding: 0 0 37px 0;
     font-size: 25px;
     font-weight: 400;
 }
 .visual a {
-    margin-right: 228px;
     font-size: 15px;
     font-weight: 400;
     padding: 5px 26px;
     border: 1px solid #fff;
     border-radius: 19px;
+}
+@media screen and (max-width:640px) {
+    .visual {
+        height: 395px;
+        text-align: left;
+    }
+    .visual h2 {
+        margin-right: 0;
+        padding: 120px 0 4px 0;
+        font-size: 30px;
+    }
+    .visual p {
+        margin-right: 0;
+        padding: 4px 0 15px 0;
+        font-size: 15px;
+    }
+    .visual a {
+        margin-right: 0;
+        font-size: 10px;
+        padding: 5px 25px;
+    }
 }
 .biz .tit {
     float: left;
@@ -145,7 +163,7 @@
     padding: 107px 0 73px 0;
     font-size: 55px;
     font-weight: 400;
-    font-family: serif;
+    font-family: 'Noto Serif KR', serif;
 }
 .fun .meet {
     float: left;
@@ -155,7 +173,7 @@
 .fun .info ul li {
     float: left;
     margin: 0 0 0 30px;
-    font-family: serif;
+    font-family: 'Noto Serif KR', serif;
 }
 .fun .info ul li h3 {
     font-size: 50px;
@@ -182,7 +200,7 @@
 .fun02 .info02 ul li {
     float: left;
     margin: 132px 0 0 100px;
-    font-family: serif;
+    font-family: 'Noto Serif KR', serif;
     text-align: right;
 }
 .fun02 .info02 ul li h3 {
