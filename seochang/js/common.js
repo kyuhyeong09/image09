@@ -58,11 +58,11 @@ $(document).ready(function(){
         --> 단, 모바일일때만 작동 (gnb_open이 pc에서 숨겨져 있는 버튼 )
         --> header에 menu_mobile이라는 스타일이 적용된 상태에서 pc로 전환됐을때도 고려해야함.
     */
-    $('.header .gnb .gnb_open').on('click', function(){
-        $('.header').addClass('menu_mobile');
+    $('header .gnb .gnb_open').on('click', function(){
+        $('header').addClass('menu_mobile');
     });
-    $('.header .gnb .gnb_close').on('click', function(){
-        $('.header').removeClass('menu_mobile');
+    $('header .gnb .gnb_close').on('click', function(){
+        $('header').removeClass('menu_mobile');
     });
 
     /*
@@ -74,7 +74,7 @@ $(document).ready(function(){
         --> pc에서는 1차메뉴를 클릭하면 첫번째 하위메뉴로 이동 (href값으로 이동)
             그러나 모바일에서는 하위메뉴 페이지로 이동 하면 안됨, 하위 메뉴를 열어야함.
     */
-    $('.header .gnb .gnb_wrap > ul > li').on('click', function(e){
+    $('header .gnb .gnb_wrap > ul > li').on('click', function(e){
         if(pcMobile == 'mobile'){ //모바일에서만 실행
             e.preventDefault();
             $(this).toggleClass('sub_open');
