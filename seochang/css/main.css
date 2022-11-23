@@ -263,6 +263,12 @@
     width: 680px;
     height: 626px;
 }
+.fun .meet .product01 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .fun .meet .info01 {
     float: left;
     margin: 20px 0 0 40px;
@@ -308,77 +314,73 @@
     border: 1px solid #3d3d3d;
     border-radius: 22px;
 }
-.fun .oat .product02 {
+.fun .oat .product02  {
     float: right;
-    width: 50%;
+    width: 680px;
     height: 626px;
     margin-top: 33px;
 }
-
+.fun .oat .product02 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 @media screen and (max-width:640px) {
     .fun {
-        background: url(../images/main/oat_bg.png) no-repeat center top / 100% 113px;
+        background: url(../images/main/oat_bg.png) no-repeat center top / auto 1600px;
+        color: #fff;
     }
     .fun h2 {
-        padding: 29px 64px 24px 64px;
-        font-size: 25px;
+        padding: 20px 64px 10px 64px;
+        font-size: 30px;
         text-align: center;
     }
     .fun .meet .product01 {
-        float: auto;
-        width: 100%;
-        height: 225px;
+        float: none;
+        width: auto;
+        height: 250px;
     }
     .fun .meet .info01 {
-        float: left;
-        margin: 20px 0 0 40px;
-        font-family: 'Noto Serif KR', serif;
+        float: none;
+        margin: 11px 0 22px 0;
+        text-align: center;
     }
     .fun .meet .info01 ul li h3 {
-        font-size: 50px;
-        font-weight: 400;
+        font-size: 25px;
     }
     .fun .meet .info01 ul li p {
-        font-size: 25px;
-        font-weight: 400;
-        margin: 11px 0 25px 0;
+        font-size: 15px;
+        margin: 7px 0 20px 0;
     }
     .fun .meet .info01 ul li a {
-        font-size: 15px;
-        font-weight: 700;
-        padding: 10px 30px;
-        border: 1px solid #fff;
-        border-radius: 22px;
+        font-size: 10px;
+        padding: 6px 24px;
     }
-    
+
     .fun .oat .info02 {
-        float: left;
-        margin: 132px 0 0 120px;
-        font-family: 'Noto Serif KR', serif;
-        color: #3d3d3d;
-        text-align: right;
+        float: none;
+        margin: 5px 0 30px 0;
+        color: #fff;
+        text-align: center;
     }
     .fun .oat .info02 ul li h3 {
-        font-size: 50px;
-        font-weight: 700;
+        font-size: 25px;
     }
     .fun .oat .info02 ul li p {
-        font-size: 25px;
-        font-weight: 400;
-        margin: 11px 0 25px 0;
+        font-size: 15px;
+        margin: 7px 0 20px 0;
     }
     .fun .oat .info02 ul li a {
-        font-size: 15px;
-        font-weight: 700;
-        padding: 10px 30px;
-        border: 1px solid #3d3d3d;
-        border-radius: 22px;
+        font-size: 10px;
+        padding: 6px 24px;
+        border: 1px solid #fff;
     }
     .fun .oat .product02 {
-        float: right;
-        width: 50%;
-        height: 626px;
-        margin-top: 33px;
+        float: none;
+        width: auto;
+        height: 250px;
+        margin-top: 0;
     }
     
 }
@@ -446,4 +448,49 @@
     border: 1px solid #fff;
     border-radius: 22px;
 }
-
+@media screen and (max-width:640px) {
+    .seo h2 {
+        margin: 50px 0 27px 0;
+        font-size: 20px;
+    }
+    .seo .pic ul li {
+        float: left;
+        padding: 50px 0 0 0;
+        width: 100%;
+        height: 193px;
+        text-align: center;
+    }
+    .seo .pic ul li i {
+        font-size: 30px;
+    }
+    .seo .pic ul li h3 {
+        margin: 0 0 10px 0;
+    }
+    .seo .pic ul li p {
+        display: none;
+    }
+    .seo .pic ul li a {
+        font-size: 8px;
+        padding: 3px 13px;
+    }
+    .seo .pic02 ul li {
+        float: left;
+        padding: 50px 0 0 0;
+        width: 100%;
+        height: 193px;
+        text-align: center;
+    }
+    .seo .pic02 ul li i {
+        font-size: 30px;
+    }
+    .seo .pic02 ul li h3 {
+        margin: 0 0 10px 0;
+    }
+    .seo .pic02 ul li p {
+        display: none;
+    }
+    .seo .pic02 ul li a {
+        font-size: 8px;
+        padding: 3px 13px;
+    }
+}
