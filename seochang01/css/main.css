@@ -293,16 +293,16 @@
     margin: 20px 0 0 40px;
     font-family: 'Noto Serif KR', serif;
 }
-.fun .meet .info01 ul li h3 {
+.fun .meet .info01 h3 {
     font-size: 50px;
     font-weight: 400;
 }
-.fun .meet .info01 ul li p {
+.fun .meet .info01 p {
     font-size: 25px;
     font-weight: 400;
     margin: 11px 0 25px 0;
 }
-.fun .meet .info01 ul li a {
+.fun .meet .info01 a {
     font-size: 15px;
     font-weight: 700;
     padding: 10px 30px;
@@ -317,16 +317,16 @@
     color: #3d3d3d;
     text-align: right;
 }
-.fun .oat .info02 ul li h3 {
+.fun .oat .info02 h3 {
     font-size: 50px;
     font-weight: 700;
 }
-.fun .oat .info02 ul li p {
+.fun .oat .info02 p {
     font-size: 25px;
     font-weight: 400;
     margin: 11px 0 25px 0;
 }
-.fun .oat .info02 ul li a {
+.fun .oat .info02 a {
     font-size: 15px;
     font-weight: 700;
     padding: 10px 30px;
@@ -365,14 +365,14 @@
         margin: 11px 0 22px 0;
         text-align: center;
     }
-    .fun .meet .info01 ul li h3 {
+    .fun .meet .info01 h3 {
         font-size: 25px;
     }
-    .fun .meet .info01 ul li p {
+    .fun .meet .info01 p {
         font-size: 15px;
         margin: 7px 0 20px 0;
     }
-    .fun .meet .info01 ul li a {
+    .fun .meet .info01 a {
         font-size: 10px;
         padding: 6px 24px;
     }
@@ -383,14 +383,14 @@
         color: #fff;
         text-align: center;
     }
-    .fun .oat .info02 ul li h3 {
+    .fun .oat .info02 h3 {
         font-size: 25px;
     }
-    .fun .oat .info02 ul li p {
+    .fun .oat .info02 p {
         font-size: 15px;
         margin: 7px 0 20px 0;
     }
-    .fun .oat .info02 ul li a {
+    .fun .oat .info02 a {
         font-size: 10px;
         padding: 6px 24px;
         border: 1px solid #fff;
@@ -403,65 +403,6 @@
     }
     
 }
-@media screen and (max-width:320px) {
-    .fun {
-        background: url(../images/main/oat_bg.png) no-repeat center top / auto 1600px;
-        color: #fff;
-    }
-    .fun h2 {
-        padding: 20px 25px 10px 25px;
-        font-size: 25px;
-        text-align: center;
-    }
-    .fun .meet .product01 {
-        float: none;
-        width: auto;
-        height: 250px;
-    }
-    .fun .meet .info01 {
-        float: none;
-        margin: 11px 0 22px 0;
-        text-align: center;
-    }
-    .fun .meet .info01 ul li h3 {
-        font-size: 20px;
-    }
-    .fun .meet .info01 ul li p {
-        font-size: 12px;
-        margin: 7px 0 20px 0;
-    }
-    .fun .meet .info01 ul li a {
-        font-size: 10px;
-        padding: 3px 12px;
-    }
-
-    .fun .oat .info02 {
-        float: none;
-        margin: 5px 0 30px 0;
-        color: #fff;
-        text-align: center;
-    }
-    .fun .oat .info02 ul li h3 {
-        font-size: 20px;
-    }
-    .fun .oat .info02 ul li p {
-        font-size: 12px;
-        margin: 7px 0 20px 0;
-    }
-    .fun .oat .info02 ul li a {
-        font-size: 10px;
-        padding: 3px 12px;
-        border: 1px solid #fff;
-    }
-    .fun .oat .product02 {
-        float: none;
-        width: auto;
-        height: 250px;
-        margin-top: 0;
-    }
-    
-}
-
 
 .seo h2 {
     margin: 62px 0 62px 0;
@@ -469,7 +410,7 @@
     font-weight: 400;
     text-align: center;
 }
-.seo .pic ul li {
+.seo .pic  {
     float: left;
     padding: 102px 0 0 122px;
     background: url(../images/main/contact.png) no-repeat center center / cover;
@@ -477,27 +418,27 @@
     height: 513px;
     color: #fff;
 }
-.seo .pic ul li i {
+.seo .pic i {
     font-size: 36px;
 }
-.seo .pic ul li h3 {
+.seo .pic h3 {
     margin-top: 35px;
     font-size: 30px;
     font-weight: 700;
 }
-.seo .pic ul li p {
+.seo .pic p {
     margin: 15px 0 50px 0;
     font-size: 20px;
     font-weight: 400;
 }
-.seo .pic ul li a {
+.seo .pic a {
     font-size: 15px;
     font-weight: 700;
     padding: 10px 30px;
     border: 1px solid #fff;
     border-radius: 22px;
 }
-.seo .pic02 ul li {
+.seo .pic02  {
     float: right;
     padding: 102px 0 0 122px;
     background: url(../images/main/recruit.png) no-repeat center center / cover;
@@ -505,20 +446,20 @@
     height: 513px;
     color: #fff;
 }
-.seo .pic02 ul li i {
+.seo .pic02  i {
     font-size: 36px;
 }
-.seo .pic02 ul li h3 {
+.seo .pic02  h3 {
     margin-top: 35px;
     font-size: 30px;
     font-weight: 700;
 }
-.seo .pic02 ul li p {
+.seo .pic02  p {
     margin: 15px 0 50px 0;
     font-size: 20px;
     font-weight: 400;
 }
-.seo .pic02 ul li a {
+.seo .pic02  a {
     font-size: 15px;
     font-weight: 700;
     padding: 10px 30px;
@@ -530,43 +471,43 @@
         margin: 50px 0 27px 0;
         font-size: 25px;
     }
-    .seo .pic ul li {
+    .seo .pic  {
         float: left;
         padding: 50px 0 0 0;
         width: 100%;
         height: 193px;
         text-align: center;
     }
-    .seo .pic ul li i {
+    .seo .pic  i {
         font-size: 30px;
     }
-    .seo .pic ul li h3 {
+    .seo .pic  h3 {
         margin: 0 0 10px 0;
     }
-    .seo .pic ul li p {
+    .seo .pic  p {
         display: none;
     }
-    .seo .pic ul li a {
+    .seo .pic  a {
         font-size: 8px;
         padding: 3px 13px;
     }
-    .seo .pic02 ul li {
+    .seo .pic02  {
         float: left;
         padding: 50px 0 0 0;
         width: 100%;
         height: 193px;
         text-align: center;
     }
-    .seo .pic02 ul li i {
+    .seo .pic02  i {
         font-size: 30px;
     }
-    .seo .pic02 ul li h3 {
+    .seo .pic02  h3 {
         margin: 0 0 10px 0;
     }
-    .seo .pic02 ul li p {
+    .seo .pic02  p {
         display: none;
     }
-    .seo .pic02 ul li a {
+    .seo .pic02  a {
         font-size: 8px;
         padding: 3px 13px;
     }
