@@ -470,13 +470,13 @@ footer .copyright {
     }
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:300px) {
     footer {
         padding: 18px 0 50px 0;
     }
     footer .family {
         position: absolute;
-        right: 71px;
+        right: 69px;
         top: 3px;
         z-index: 100;
     }
