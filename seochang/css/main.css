@@ -156,7 +156,116 @@
     opacity: 1;
 }
 
-@media screen and (min-width:300px) and (max-width:640px) {
+@media screen and (max-width:640px) {
+    .biz {
+        margin: 20px 0 50px 0;
+    }
+    .biz .tit {
+        float: none;
+        padding: 0;
+    }
+    .biz .tit h2 {
+        font-size: 20px;
+    }
+    .biz .tit p {
+        font-size: 15px;
+    }
+    .biz .list {
+        float: none;
+        margin: 30px 0 0 0;
+        width: auto;
+        padding-bottom: 61px; /* 가로 스크롤바가 글자에 겹쳐서  */
+    }
+    .biz .list .swiper-scrollbar {
+        opacity: 1 !important;
+        background-color: #ccc;
+        height: 1px;
+    }
+    .biz .list .swiper-scrollbar .swiper-scrollbar-drag {
+        position: relative;
+        opacity: 1;
+    }
+    .biz .list .swiper-scrollbar .swiper-scrollbar-drag::before {
+        position: absolute;
+        left: 0;
+        top: -1px;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(192,162,122,0.8);
+        content: "";
+    }
+    .biz .list ul {
+        width: 1310px;
+        margin-left: 0;
+    }
+    .biz .list ul li {
+        width: 309px;
+    }
+    
+    .biz .list ul li a {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        height: 400px;
+    }
+    .biz .list ul li a .inner {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        transition: 0;
+        padding: 20px 15px 30px 15px;
+    } 
+    .biz .list .pic01 {
+        height: 400px;
+    }
+    .biz .list li a .inner i {
+        display: none;
+    }
+    .biz .list li a .inner h3 {
+        font-size: 20px;
+    }
+    .biz .list li a .inner p {
+        position: relative;
+        margin: 14px 0 14px 0;
+        font-size: 10px;
+        opacity: 0;
+        transition: 0;
+        /* border-bottom: 1px solid #fff; */
+    }
+    .biz .list li a .inner p::after {
+        position: absolute;
+        left: 0px;
+        bottom: -10px;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+        content: "";
+    }
+    .biz .list li a .inner span {
+        font-size: 10px;
+        transition: auto;
+        opacity: 0;
+    }
+    .biz .list .pic02 {
+        height: 400px;
+    }
+    .biz .list .pic03 {
+        height: 400px;
+    }
+    .biz .list li a .inner {
+        bottom: 0;
+        background-color: rgba(192,162,122,0.8);
+        padding-bottom: 0;
+    }
+    .biz .list li a .inner p {
+        opacity: 1;
+    }
+    .biz .list li a .inner span {
+        opacity: 1;
+    }
+}
+@media screen and (max-width:411px) {
     .biz {
         margin: 20px 0 50px 0;
     }
