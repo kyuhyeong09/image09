@@ -313,7 +313,7 @@ footer {
 footer .family {
     position: absolute;
     right: 0;
-    top: 25px;
+    top: 7px;
     z-index: 100;
 }
 footer .family button {
@@ -385,7 +385,89 @@ footer .copyright {
     margin: 20px 0 0 0;
     color: rgba(255,255,255,0.6);
 }
-
+@media screen and (max-width:768px) {
+     footer {
+        padding: 18px 0 50px 0;
+    }
+    footer .family {
+        position: absolute;
+        right: 45px;
+        top: 3px;
+        z-index: 100;
+    }
+    footer .family button {
+        width: 200px;
+        height: 37px;
+        padding: 0 5px 0 10px;
+        border: 1px solid rgba(255,255,255,0.6);
+    }
+    footer .family button span {
+        float: left;
+    }
+    footer .family button i {
+        float: right;
+        margin: 3px 0 0 0;
+        font-size: 18px;
+    }
+    footer .family button.close {
+        display: none;
+    }
+    footer .family ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 37px;
+        width: 100%;
+        box-shadow: -3px -3px 10px rgba(0,0,0,0.05);
+    }
+    footer .family.fa_open ul {
+        display: block;
+    }
+    footer .family.fa_open button.close {
+        display: block;
+    }
+    footer .family.fa_open button.open {
+        display: none;
+    }
+    footer .family ul li {
+        border-bottom: 1px solid #CCC;
+    }
+    footer .family ul li:last-child {
+        border-bottom: 0;
+    }
+    footer .family ul li a {
+        display: block;
+        padding: 0 0 0 10px;
+        line-height: 45px;
+        background-color: #FFF;
+        color: #3D3D3D;
+    }
+    footer .family ul li a:hover {
+        background-color: #1255A5;
+        color: #FFF;
+    }
+    footer .flogo {
+        display: block;
+    }
+    footer .inner {
+        float: left;
+        margin: 2px 0 0 40px;
+    }
+    footer .fnav {
+        margin-bottom: 20px;
+    }
+    footer .finfo span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    footer .finfo span.next {
+        margin-bottom: 10px;
+    }
+    footer .copyright {
+        margin: 20px 0 0 0;
+        color: rgba(255,255,255,0.6);
+    }
+}
 @media screen and (max-width:640px) {
     footer {
         padding: 18px 0 50px 0;
@@ -469,14 +551,180 @@ footer .copyright {
         color: rgba(255,255,255,0.6);
     }
 }
-
-@media screen and (max-width:300px) {
+@media screen and (max-width:425px) {
     footer {
         padding: 18px 0 50px 0;
     }
     footer .family {
         position: absolute;
-        right: 69px;
+        right: 112px;
+        top: 3px;
+        z-index: 100;
+    }
+    footer .family button {
+        width: 200px;
+        height: 37px;
+        padding: 0 5px 0 10px;
+        border: 1px solid rgba(255,255,255,0.6);
+    }
+    footer .family button span {
+        float: left;
+    }
+    footer .family button i {
+        float: right;
+        margin: 3px 0 0 0;
+        font-size: 18px;
+    }
+    footer .family button.close {
+        display: none;
+    }
+    footer .family ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 37px;
+        width: 100%;
+        box-shadow: -3px -3px 10px rgba(0,0,0,0.05);
+    }
+    footer .family.fa_open ul {
+        display: block;
+    }
+    footer .family.fa_open button.close {
+        display: block;
+    }
+    footer .family.fa_open button.open {
+        display: none;
+    }
+    footer .family ul li {
+        border-bottom: 1px solid #CCC;
+    }
+    footer .family ul li:last-child {
+        border-bottom: 0;
+    }
+    footer .family ul li a {
+        display: block;
+        padding: 0 0 0 10px;
+        line-height: 45px;
+        background-color: #FFF;
+        color: #3D3D3D;
+    }
+    footer .family ul li a:hover {
+        background-color: #1255A5;
+        color: #FFF;
+    }
+    footer .flogo {
+        display: none;
+    }
+    footer .inner {
+        float: left;
+        margin: 71px 0 0 0;
+    }
+    footer .fnav {
+        margin-bottom: 20px;
+    }
+    footer .finfo span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    footer .finfo span.next {
+        margin-bottom: 10px;
+    }
+    footer .copyright {
+        margin: 20px 0 0 0;
+        color: rgba(255,255,255,0.6);
+    }
+}
+
+@media screen and (max-width:375px) {
+    footer {
+        padding: 18px 0 50px 0;
+    }
+    footer .family {
+        position: absolute;
+        right: 87px;
+        top: 3px;
+        z-index: 100;
+    }
+    footer .family button {
+        width: 200px;
+        height: 37px;
+        padding: 0 5px 0 10px;
+        border: 1px solid rgba(255,255,255,0.6);
+    }
+    footer .family button span {
+        float: left;
+    }
+    footer .family button i {
+        float: right;
+        margin: 3px 0 0 0;
+        font-size: 18px;
+    }
+    footer .family button.close {
+        display: none;
+    }
+    footer .family ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 37px;
+        width: 100%;
+        box-shadow: -3px -3px 10px rgba(0,0,0,0.05);
+    }
+    footer .family.fa_open ul {
+        display: block;
+    }
+    footer .family.fa_open button.close {
+        display: block;
+    }
+    footer .family.fa_open button.open {
+        display: none;
+    }
+    footer .family ul li {
+        border-bottom: 1px solid #CCC;
+    }
+    footer .family ul li:last-child {
+        border-bottom: 0;
+    }
+    footer .family ul li a {
+        display: block;
+        padding: 0 0 0 10px;
+        line-height: 45px;
+        background-color: #FFF;
+        color: #3D3D3D;
+    }
+    footer .family ul li a:hover {
+        background-color: #1255A5;
+        color: #FFF;
+    }
+    footer .flogo {
+        display: none;
+    }
+    footer .inner {
+        float: left;
+        margin: 78px 0 0 0;
+    }
+    footer .fnav {
+        margin-bottom: 20px;
+    }
+    footer .finfo span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+    footer .finfo span.next {
+        margin-bottom: 10px;
+    }
+    footer .copyright {
+        margin: 20px 0 0 0;
+        color: rgba(255,255,255,0.6);
+    }
+}
+@media screen and (max-width:320px) {
+    footer {
+        padding: 18px 0 50px 0;
+    }
+    footer .family {
+        position: absolute;
+        right: 87px;
         top: 3px;
         z-index: 100;
     }
