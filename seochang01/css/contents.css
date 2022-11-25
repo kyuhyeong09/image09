@@ -135,7 +135,7 @@
     }
 }
 .container .sub_tit h2 {
-    margin: 130px 0 0 0;
+    margin: 90px 0 0 0;
     font-size: 40px;
     font-weight: 700;
 }
@@ -165,7 +165,10 @@
     position: relative; /* year_tit 정렬의 기준 */
 }
 .cts_history .inner + .inner {
-    margin: 116px 0 0 0;
+    margin: 90px 0 0 0;
+}
+.cts_history .inner + .inner + .inner {
+    margin: 147px 0 180px 0;
 }
 .cts_history .year_tit {
     position: absolute;
@@ -278,7 +281,93 @@
     padding-top: 10px;
 }
 
-
+@media screen and (max-width:640px) {
+    .cts_history .tit {
+        font-size: 20px;
+    }
+    .cts_history .tit span {
+        display: inline; /* pc에서만 줄바꿈 */
+    }
+    .cts_history .history_wrap {
+        margin: 28px 0 0 0;
+    }
+    .cts_history .history_wrap::before {
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+    .cts_history .inner + .inner +.inner {
+        margin: 29px 0 0 0; 
+    }
+    .cts_history .year_tit {
+        position: relative;
+        width: calc(100% + 40px);
+    }
+    .cts_history .year_tit.left {
+        left: -20px;
+    }
+    .cts_history .year_tit.right {
+        right: 20px;
+    }
+    .cts_history .year_tit .bg {
+        width: 100%;
+        height: 122px;
+    }
+    .cts_history .year_tit h3 {
+        top: 36px;
+        font-size: 30px;
+    }
+    .cts_history .year_list.left {
+        margin: 29px 0 0 23px;
+    }
+    .cts_history .year_list.right {
+        margin: 29px 0 0 23px;
+    }
+    
+    .cts_history .year_list h4 {
+        font-size: 20px;
+    }
+    .cts_history .year_list.left h4 {
+        margin-left: 0;
+        float: none;
+    }
+    .cts_history .year_list.right h4 {
+        margin-right: 0;
+        float: none;
+    }
+    .cts_history .year_list h4::before {
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+    }
+    .cts_history .year_list.left h4::before {
+        left: -27px;
+    }
+    .cts_history .year_list.right h4::before {
+        right: auto;
+        left: -27px;
+    }
+    .cts_history .year_list.left dl {
+        margin: 5px 0 26px 0;
+    }
+    .cts_history .year_list.right dl {
+        margin: 5px 0 26px 0;
+    }
+    .cts_history .year_list.right dl dt {
+        float: left;
+    }
+    .cts_history .year_list.left dl dd {
+        margin-left:33px;
+    }
+    .cts_history .year_list.right dl dd {
+        margin-right:0;
+        margin-left: 33px;
+        text-align: left;
+    }
+    .cts_history .year_list dl {
+        padding-top: 0;
+    }
+}
 
 .cts_contact h2 {
     margin: 104px 0 37px 0;
