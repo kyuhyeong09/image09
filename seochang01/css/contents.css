@@ -129,18 +129,17 @@
         margin: 19px 0 0 0;
         font-size: 20px;
     }
-    .cts_group .jo img {
-        width: auto;
-        height: auto;
-    }
+
 }
-.container .sub_tit h2 {
+.cts_history h2 {
     margin: 90px 0 0 0;
     font-size: 40px;
     font-weight: 700;
+    text-align: center;
 }
 .cts_history .tit {
     font-size: 30px;
+    font-weight: 700;
     margin-top: 42px;
     text-align: center;
 }
@@ -156,7 +155,7 @@
     left: 50%;
     top: 12px;
     width: 1px;
-    height: calc(100% - 18px);
+    height: calc(100% - 66px);
     background-color: #ED1C24;
     content: "";
 }
@@ -368,12 +367,17 @@
         padding-top: 0;
     }
 }
-
 .cts_contact h2 {
-    margin: 104px 0 37px 0;
+    margin-top: 105px;
     font-size: 40px;
     font-weight: 700;
     text-align: center;
+}
+.cts_contact h3 {
+    margin: 50px 0 20px 0;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: left;
 }
 .cts_contact .addr {
     float: left;
@@ -391,7 +395,5 @@
     margin-right: 28px;
 }
 .cts_contact .map_box {
-    display: block;
-    width: 100%;
-    height: 708px;
+    margin: 30px 0 83px 0;
 }
