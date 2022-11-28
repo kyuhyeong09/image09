@@ -427,13 +427,13 @@
         margin: 14px 0 10px 0;
     }
 }
-.cts_product01 h2 {
+.cts_cts_report0201 h2 {
     margin: 96px 0 0 0;
     font-size: 40px;
     font-weight: 700;
     text-align: center;
 }
-.cts_product01 .jo img {
+.cts_cts_report0201 .jo img {
     display: block;
     padding: 50px 0 50px 356px;
     width: 50%;
@@ -446,7 +446,7 @@
         margin: 55px 0 0 0;
         font-size: 20px;
     }
-    .cts_product01 .jo img {
+    .cts_cts_report0201 .jo img {
         display: block;
         padding: 50px 0 50px 0;
         width: 100%;
@@ -454,13 +454,13 @@
         object-fit: cover;
     }
 }
-.cts_product02 h2 {
+.cts_cts_report0202 h2 {
     margin: 96px 0 0 0;
     font-size: 40px;
     font-weight: 700;
     text-align: center;
 }
-.cts_product02 .jo img {
+.cts_cts_report0202 .jo img {
     display: block;
     padding: 50px 0 50px 356px;
     width: 50%;
@@ -469,11 +469,11 @@
 }
 
 @media screen and (max-width:640px) {
-    .cts_group h2 {
+    .cts_cts_report0202 h2 {
         margin: 55px 0 0 0;
         font-size: 20px;
     }
-    .cts_product02 .jo img {
+    .cts_cts_report0202 .jo img {
         display: block;
         padding: 50px 0 50px 0;
         width: 100%;
@@ -503,3 +503,151 @@
         font-size: 20px;
     }
 }
+
+.cts_work02 h2 {
+    margin: 96px 0 0 0;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.cts_work02 .jo img {
+    display: block;
+    padding: 50px 0 50px 356px;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:640px) {
+    .cts_work02 h2 {
+        margin: 55px 0 0 0;
+        font-size: 20px;
+    }
+    .cts_work02 .jo img {
+        display: block;
+        padding: 50px 0 50px 0;
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+}
+.cts_report02 {
+    position: relative;
+    margin: 159px 0 0 0;
+}
+.cts_report02 h2 {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 640px);
+    float: left;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.cts_report02 h2 span { /*pc에서만 줄바꿈*/
+    display: block;
+}
+.cts_report02 h2.fixed {
+    position: fixed;
+    top: 120px;
+}
+.cts_report02 h2.end {
+    position: absolute;
+    top: auto;
+    bottom: 105px;
+}
+.cts_report02 .list {
+    margin-left: 400px;
+}
+.cts_report02 .list ul li {
+    width: 400px;
+    margin: 0 0 100px 0;
+}
+.cts_report02 .list ul li:nth-child(1),
+.cts_report02 .list ul li:nth-child(3),
+.cts_report02 .list ul li:nth-child(5),
+.cts_report02 .list ul li:nth-child(7),
+.cts_report02 .list ul li:nth-child(9),
+.cts_report02 .list ul li:nth-child(11){
+    float: left;
+}
+.cts_report02 .list ul li:nth-child(2),
+.cts_report02 .list ul li:nth-child(4),
+.cts_report02 .list ul li:nth-child(8),
+.cts_report02 .list ul li:nth-child(10),
+.cts_report02 .list ul li:nth-child(12){
+    float: right;
+}
+.cts_report02 .list ul li:nth-child(2) {
+    margin-top: 200px;
+}
+.cts_report02 .list ul li a {
+    display: block;
+}
+.cts_report02 .list ul li a strong {
+    display: block;
+    margin: 17px 0 14px 0;
+    font-size: 25px;
+    font-weight: 700;
+    /* 2줄 */
+    line-height: 1.2;
+    height: 2.4em;
+    overflow: hidden;
+}
+
+@media screen and (max-width:640px){
+    .cts_report02 {
+        margin: 49px 0 0 0;
+    }
+    .cts_report02 h2 {
+        position: relative;
+        top: auto;
+        left: auto;
+        float: none;
+        font-size: 20px;
+    }
+    .cts_report02 h2 span { /*pc에서만 줄바꿈*/
+        display: inline;
+    }
+    .cts_report02 h2.fixed {
+        position: relative;
+        top: auto;
+    }
+    .cts_report02 h2.end {
+        position: relative;
+        bottom: auto;
+    }
+    .cts_report02 .list {
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: calc(100% + 20px);
+        margin-left: 0;
+    }
+    .cts_report02 .list ul { /* (250+20)*5 = 1350 */
+        width: 1350px;
+        padding: 14px 0;/* 스크롤바가 콘텐츠 바로 아래 생성되는 것을 막기 위해 */
+    }
+    .cts_report02 .list ul li {
+        width: 250px;
+        margin: 0 20px 0 0;
+    }
+    .cts_report02 .list ul li:nth-child(2),
+    .cts_report02 .list ul li:nth-child(4),
+    .cts_report02 .list ul li:nth-child(6),
+    .cts_report02 .list ul li:nth-child(8),
+    .cts_report02 .list ul li:nth-child(10),
+    .cts_report02 .list ul li:nth-child(12){
+        float: left;
+    }
+    .cts_report02 .list ul li:nth-child(2) {
+        margin-top: 0;
+    }
+    .cts_report02 .list ul li a img {
+        width: 100%;
+    }
+    .cts_report02 .list ul li a strong {
+        margin: 18px 0 11px 0;
+        font-size: 15px;
+    }
+
+}/* cts_report02 media */
