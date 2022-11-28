@@ -352,7 +352,7 @@
     }
     .fun h2 {
         padding: 20px 64px 10px 64px;
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
     }
     .fun .meet .product01 {
@@ -369,7 +369,7 @@
         font-size: 25px;
     }
     .fun .meet .info01 p {
-        font-size: 15px;
+        font-size: 12px;
         margin: 7px 0 20px 0;
     }
     .fun .meet .info01 a {
@@ -387,7 +387,7 @@
         font-size: 25px;
     }
     .fun .oat .info02 p {
-        font-size: 15px;
+        font-size: 12px;
         margin: 7px 0 20px 0;
     }
     .fun .oat .info02 a {
@@ -469,7 +469,7 @@
 @media screen and (max-width:640px) {
     .seo h2 {
         margin: 50px 0 27px 0;
-        font-size: 25px;
+        font-size: 20px;
     }
     .seo .pic  {
         float: left;
