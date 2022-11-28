@@ -618,7 +618,7 @@
         margin-left: 0;
     }
     .cts_report02 .list ul { /* (250+20)*5 = 1350 */
-        width: 3240px;
+        width: 2700px;
         padding: 14px 0;/* 스크롤바가 콘텐츠 바로 아래 생성되는 것을 막기 위해 */
     }
     .cts_report02 .list ul li {
