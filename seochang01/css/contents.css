@@ -544,9 +544,6 @@
     font-weight: 700;
     line-height: 1.2;
 }
-.cts_report02 h2 span { /*pc에서만 줄바꿈*/
-    display: block;
-}
 .cts_report02 h2.fixed {
     position: fixed;
     top: 120px;
@@ -567,15 +564,14 @@
 .cts_report02 .list ul li:nth-child(3),
 .cts_report02 .list ul li:nth-child(5),
 .cts_report02 .list ul li:nth-child(7),
-.cts_report02 .list ul li:nth-child(9),
-.cts_report02 .list ul li:nth-child(11){
+.cts_report02 .list ul li:nth-child(9){
     float: left;
 }
 .cts_report02 .list ul li:nth-child(2),
 .cts_report02 .list ul li:nth-child(4),
+.cts_report02 .list ul li:nth-child(6),
 .cts_report02 .list ul li:nth-child(8),
-.cts_report02 .list ul li:nth-child(10),
-.cts_report02 .list ul li:nth-child(12){
+.cts_report02 .list ul li:nth-child(10){
     float: right;
 }
 .cts_report02 .list ul li:nth-child(2) {
@@ -606,9 +602,7 @@
         float: none;
         font-size: 20px;
     }
-    .cts_report02 h2 span { /*pc에서만 줄바꿈*/
-        display: inline;
-    }
+
     .cts_report02 h2.fixed {
         position: relative;
         top: auto;
@@ -624,7 +618,7 @@
         margin-left: 0;
     }
     .cts_report02 .list ul { /* (250+20)*5 = 1350 */
-        width: 1350px;
+        width: 3240px;
         padding: 14px 0;/* 스크롤바가 콘텐츠 바로 아래 생성되는 것을 막기 위해 */
     }
     .cts_report02 .list ul li {
