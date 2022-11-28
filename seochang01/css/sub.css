@@ -100,6 +100,10 @@
     .sub_visual {
         height: 215px;
     }
+    .sub_visual strong {
+        padding: 87px 0 0 0;
+        font-size: 15px;
+    }
     .sub_visual .lnb {
         height: 35px;
     }
